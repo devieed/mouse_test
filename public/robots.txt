@@ -1,0 +1,38 @@
+# Mouse Click Speed Test - robots.txt
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin areas (if any in future)
+# Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://ed9e.net/mouse_test/sitemap.xml
+
+# Crawl-delay for specific bots (optional, adjust as needed)
+# User-agent: Googlebot
+# Crawl-delay: 0
+
+# User-agent: Bingbot
+# Crawl-delay: 1
+
+# Block bad bots (optional, uncomment if needed)
+# User-agent: BadBot
+# Disallow: /
+
+# User-agent: SemrushBot
+# Crawl-delay: 5
+
+# Additional rules
+# Allow access to CSS, JS, and images for proper rendering
+User-agent: *
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+
