@@ -61,10 +61,10 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useSeoMeta } from './composables/useSeoMeta'
-import i18n from './i18n'
+import i18n, { updateURLLanguage } from './i18n'
 
 const { t, locale } = useI18n()
 
@@ -146,6 +146,9 @@ const reset = () => {
 
 const changeLanguage = () => {
   locale.value = currentLocale.value
+  
+  // 更新URL参数
+  updateURLLanguage(currentLocale.value)
   
   // 发送Google Analytics事件
   if (window.gtag) {
