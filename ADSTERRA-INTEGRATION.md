@@ -2,55 +2,54 @@
 
 ## ✅ 已完成的集成
 
-### 1. 广告脚本添加
+### 1. Social Bar 广告脚本
 
-**位置**: `index.html` - head部分
+**广告类型**: Social Bar（社交栏广告）
+
+**位置**: `index.html` - `</body>` 标签之前
 
 ```html
-<!-- Adsterra Ads -->
-<script src="https://pl28689488.effectivegatecpm.com/b0/ad/1c/b0ad1c3781ccf89cb6d4757eb032740b.js"></script>
+<!-- Adsterra Social Bar - Place before closing body tag -->
+<script src="https://pl28689832.effectivegatecpm.com/a6/2a/ba/a62aba11f118cd9739810dab056eea59.js"></script>
 ```
 
 **说明**:
-- 放置在Google Analytics之后
-- 在页面加载时自动执行
-- 全局可用
+- ✅ 放置在 `</body>` 之前（根据Adsterra官方文档）
+- ✅ 自动显示在页面底部或顶部
+- ✅ 不需要额外的HTML容器
+- ✅ 对用户体验影响最小
+- ✅ 轻量级，不影响页面加载速度
 
-### 2. 广告展示区域
+### 2. Social Bar 特点
 
-**位置**: FAQ部分之后，Footer之前
+**优势**:
+- ✅ **非侵入式**: 固定在页面边缘，不遮挡主要内容
+- ✅ **用户友好**: 可以轻松关闭
+- ✅ **高可见性**: 始终可见，不需要滚动
+- ✅ **高CPM**: Social Bar通常有较高的CPM率
+- ✅ **移动端优化**: 完美适配移动设备
+- ✅ **无需订阅**: 不需要浏览器推送订阅
 
-**设计特点**:
-- ✅ 白色卡片背景，与页面风格一致
-- ✅ 圆角设计（16px）
-- ✅ 轻微阴影效果
-- ✅ 居中对齐
-- ✅ 最小高度100px
-- ✅ 响应式设计
+**与Popunder对比**:
+| 特性 | Social Bar | Popunder |
+|------|-----------|----------|
+| 用户体验 | ✅ 友好 | ❌ 侵入式 |
+| 可见性 | ✅ 高 | ⚠️ 中等 |
+| 关闭方式 | ✅ 容易 | ❌ 困难 |
+| 移动端 | ✅ 优化 | ❌ 体验差 |
+| CPM | ✅ 高 | ✅ 高 |
+| 推荐度 | ✅✅✅ | ❌ |
 
-**CSS样式**:
-```css
-.ad-section {
-  background: white;
-  padding: 30px 20px;
-  margin: 30px 20px 20px;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  text-align: center;
-}
+### 3. Social Bar 显示位置
 
-.ad-container {
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+Social Bar会自动显示在：
+- **桌面端**: 页面底部固定栏
+- **移动端**: 页面底部或顶部固定栏
+- **可关闭**: 用户可以点击X关闭
+
+**页面结构**:
 ```
-
-### 3. 广告位置布局
-
-```
-页面结构：
+📢 Social Bar (固定在顶部/底部) ← 自动显示
 ├── Header (标题和副标题)
 ├── Stats Cards (统计卡片)
 ├── Test Area (测试区域)
@@ -58,7 +57,6 @@
 ├── How to Use (使用方法)
 ├── Features (主要特点)
 ├── FAQ (常见问题)
-├── 📢 Ad Section (广告区域) ← 新增
 └── Footer (页脚)
 ```
 
@@ -81,42 +79,39 @@
    - 对内容有足够了解
    - 更可能点击广告
 
-### 广告类型支持
+### 当前广告类型
 
-Adsterra支持多种广告格式，当前集成支持：
-- ✅ Banner广告
-- ✅ Native广告
-- ✅ Popunder（如果启用）
-- ✅ Social Bar
-- ✅ 其他Adsterra支持的格式
+**已集成**: Social Bar
 
-## 🎨 设计整合
+**为什么选择Social Bar**:
+1. ✅ 用户体验最佳
+2. ✅ 不会被广告拦截器屏蔽
+3. ✅ 高可见性和点击率
+4. ✅ 移动端友好
+5. ✅ 符合Google AdSense审核要求
 
-### 视觉一致性
+**未来可考虑**:
+- Banner广告（页面内嵌入式）
+- Native广告（原生广告）
+- ❌ Popunder（已移除，用户体验差）
 
-广告区域采用与页面其他部分相同的设计语言：
-- 白色背景
-- 圆角卡片
-- 轻微阴影
-- 适当间距
+## 🎨 Social Bar 设计
 
-### 响应式设计
+### 自动适配
 
-```css
-/* 桌面端 */
-.ad-section {
-  margin: 30px 20px 20px;
-  padding: 30px 20px;
-}
+Social Bar由Adsterra自动管理，会：
+- ✅ 自动适配页面宽度
+- ✅ 自动选择最佳位置（顶部/底部）
+- ✅ 自动适配移动端
+- ✅ 自动优化显示时机
 
-/* 移动端自动适配 */
-@media (max-width: 768px) {
-  .ad-section {
-    margin: 20px 10px;
-    padding: 20px 15px;
-  }
-}
-```
+### 无需额外CSS
+
+Social Bar不需要额外的CSS样式，Adsterra会：
+- 自动处理z-index
+- 自动处理响应式
+- 自动处理动画效果
+- 自动处理关闭按钮
 
 ## 📈 预期效果
 
