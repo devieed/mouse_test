@@ -121,6 +121,13 @@
         </div>
       </section>
 
+      <!-- Ad Space -->
+      <section class="ad-section">
+        <div class="ad-container" id="adsterra-container">
+          <!-- Adsterra ads will be displayed here -->
+        </div>
+      </section>
+
     </div>
     
     <!-- Language Selector - Fixed Position -->
@@ -597,6 +604,23 @@ const changeLanguage = () => {
 .faq-item[open] summary {
   background: #e9ecef;
   border-bottom: 1px solid #dee2e6;
+}
+
+/* Ad Section */
+.ad-section {
+  background: white;
+  padding: 30px 20px;
+  margin: 30px 20px 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.ad-container {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Language Selector - Fixed at Top Right */
