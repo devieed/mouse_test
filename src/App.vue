@@ -121,19 +121,19 @@
         </div>
       </section>
 
-      <!-- Language Selector -->
-      <div class="language-selector">
-        <label>{{ t('selectLanguage') }}:</label>
-        <select v-model="currentLocale" @change="changeLanguage">
-          <option value="ko">한국어 🇰🇷</option>
-          <option value="en">English 🇺🇸</option>
-          <option value="zh-CN">简体中文 🇨🇳</option>
-          <option value="zh-TW">繁體中文 🇹🇼</option>
-          <option value="ja">日本語 🇯🇵</option>
-          <option value="de">Deutsch 🇩🇪</option>
-          <option value="fr">Français 🇫🇷</option>
-        </select>
-      </div>
+    </div>
+    
+    <!-- Language Selector - Fixed Position -->
+    <div class="language-selector-fixed">
+      <select v-model="currentLocale" @change="changeLanguage" class="lang-dropdown">
+        <option value="ko">🇰🇷 한국어</option>
+        <option value="en">🇺🇸 English</option>
+        <option value="zh-CN">🇨🇳 简体中文</option>
+        <option value="zh-TW">🇹🇼 繁體中文</option>
+        <option value="ja">🇯🇵 日本語</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="fr">🇫🇷 Français</option>
+      </select>
     </div>
 
     <!-- Footer -->
@@ -599,42 +599,48 @@ const changeLanguage = () => {
   border-bottom: 1px solid #dee2e6;
 }
 
-/* Language Selector */
-.language-selector {
-  text-align: center;
-  margin: 40px 20px 20px;
-  padding: 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+/* Language Selector - Fixed at Top Right */
+.language-selector-fixed {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
-.language-selector label {
-  font-size: 0.95rem;
-  color: #666;
-  margin-right: 10px;
-  font-weight: 500;
-}
-
-.language-selector select {
+.lang-dropdown {
   padding: 10px 16px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   border: 2px solid #e9ecef;
-  border-radius: 8px;
+  border-radius: 10px;
   background: white;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.language-selector select:hover {
+.lang-dropdown:hover {
   border-color: #667eea;
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
 }
 
-.language-selector select:focus {
+.lang-dropdown:focus {
   outline: none;
   border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+@media (max-width: 768px) {
+  .language-selector-fixed {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .lang-dropdown {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
 }
 
 /* Footer */
