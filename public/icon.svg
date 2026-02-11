@@ -1,56 +1,97 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="appBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    <linearGradient id="appAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="appClick" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
     </linearGradient>
   </defs>
   
-  <!-- Background -->
-  <rect width="512" height="512" rx="90" fill="url(#grad1)"/>
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="110" fill="url(#appBg)"/>
   
-  <!-- Mouse Shape -->
-  <path d="M 256 120 
-           C 210 120 175 155 175 200 
-           L 175 340 
-           C 175 385 210 420 256 420 
-           C 302 420 337 385 337 340 
-           L 337 200 
-           C 337 155 302 120 256 120 Z" 
-        fill="#ffffff" 
-        opacity="0.95"/>
+  <!-- Inner Circle -->
+  <circle cx="256" cy="256" r="190" fill="rgba(255,255,255,0.15)"/>
   
-  <!-- Mouse Divider -->
-  <line x1="256" y1="120" x2="256" y2="220" 
-        stroke="url(#grad1)" 
-        stroke-width="4" 
+  <!-- Speed Meter Arc -->
+  <path d="M 140 256 A 116 116 0 0 1 372 256" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="18" 
+        stroke-linecap="round"
+        opacity="0.3"/>
+  <path d="M 140 256 A 116 116 0 0 1 310 186" 
+        fill="none" 
+        stroke="url(#appClick)" 
+        stroke-width="20" 
         stroke-linecap="round"/>
   
-  <!-- Scroll Wheel -->
-  <rect x="244" y="145" width="24" height="45" rx="12" 
-        fill="url(#grad1)" 
-        opacity="0.8"/>
+  <!-- Center Point -->
+  <circle cx="256" cy="256" r="25" fill="#ffffff"/>
+  <circle cx="256" cy="256" r="18" fill="url(#appAccent)"/>
   
-  <!-- Click Indicator Circles -->
-  <circle cx="350" cy="180" r="12" fill="url(#grad2)" opacity="0.8"/>
-  <circle cx="370" cy="210" r="10" fill="url(#grad2)" opacity="0.7"/>
-  <circle cx="360" cy="250" r="14" fill="url(#grad2)" opacity="0.9"/>
+  <!-- Pointer -->
+  <g transform="rotate(-45 256 256)">
+    <path d="M 256 256 L 250 150 L 262 150 Z" 
+          fill="#ffffff" 
+          filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))"/>
+  </g>
   
-  <circle cx="162" cy="190" r="10" fill="url(#grad2)" opacity="0.7"/>
-  <circle cx="145" cy="240" r="12" fill="url(#grad2)" opacity="0.8"/>
-  <circle cx="155" cy="280" r="9" fill="url(#grad2)" opacity="0.7"/>
+  <!-- Cursor Icon -->
+  <g transform="translate(210, 290)">
+    <path d="M 0 0 L 0 50 L 15 40 L 22 60 L 30 56 L 23 36 L 38 36 Z" 
+          fill="#ffffff" 
+          stroke="#333" 
+          stroke-width="3"
+          filter="drop-shadow(0 2px 4px rgba(0,0,0,0.2))"/>
+  </g>
   
-  <!-- Bottom Badge with CPS -->
-  <circle cx="256" cy="360" r="40" fill="url(#grad2)" opacity="0.95"/>
-  <text x="256" y="370" 
+  <!-- Lightning Bolts -->
+  <g opacity="0.9">
+    <path d="M 380 200 L 365 240 L 380 240 L 355 295 L 390 250 L 375 250 Z" 
+          fill="url(#appClick)" 
+          stroke="#ffffff" 
+          stroke-width="4"/>
+    <path d="M 130 200 L 145 240 L 130 240 L 155 295 L 120 250 L 135 250 Z" 
+          fill="url(#appClick)" 
+          stroke="#ffffff" 
+          stroke-width="4"/>
+  </g>
+  
+  <!-- Click Effect Circles -->
+  <g opacity="0.5">
+    <circle cx="256" cy="256" r="140" fill="none" stroke="url(#appClick)" stroke-width="3" stroke-dasharray="8 12"/>
+    <circle cx="256" cy="256" r="160" fill="none" stroke="url(#appClick)" stroke-width="2" stroke-dasharray="6 10"/>
+  </g>
+  
+  <!-- Number Indicators -->
+  <text x="125" y="275" font-family="Arial" font-size="28" font-weight="bold" fill="#ffffff">0</text>
+  <text x="160" y="185" font-family="Arial" font-size="28" font-weight="bold" fill="#ffffff">10</text>
+  <text x="242" y="140" font-family="Arial" font-size="28" font-weight="bold" fill="#ffffff">20</text>
+  <text x="345" y="185" font-family="Arial" font-size="28" font-weight="bold" fill="#ffffff">30</text>
+  
+  <!-- Bottom Badge -->
+  <ellipse cx="256" cy="420" rx="120" ry="50" fill="rgba(255,255,255,0.2)"/>
+  <text x="256" y="420" 
         font-family="Arial, Helvetica, sans-serif" 
-        font-size="36" 
-        font-weight="bold" 
+        font-size="42" 
+        font-weight="900" 
         fill="#ffffff" 
-        text-anchor="middle">CPS</text>
+        text-anchor="middle"
+        letter-spacing="2">CLICK</text>
+  <text x="256" y="450" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="24" 
+        font-weight="700" 
+        fill="#ffffff" 
+        text-anchor="middle"
+        opacity="0.9"
+        letter-spacing="4">SPEED</text>
 </svg>
-

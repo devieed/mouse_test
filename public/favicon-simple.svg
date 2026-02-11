@@ -1,47 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    <linearGradient id="acc2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
     </linearGradient>
   </defs>
   
-  <!-- Background Circle -->
-  <circle cx="32" cy="32" r="30" fill="url(#g1)"/>
+  <!-- Background -->
+  <circle cx="32" cy="32" r="32" fill="url(#bg2)"/>
   
-  <!-- Mouse -->
-  <path d="M 32 16 
-           C 26 16 21 21 21 27 
-           L 21 44 
-           C 21 50 26 55 32 55 
-           C 38 55 43 50 43 44 
-           L 43 27 
-           C 43 21 38 16 32 16 Z" 
-        fill="#ffffff" 
-        opacity="0.95"/>
-  
-  <!-- Mouse Line -->
-  <line x1="32" y1="16" x2="32" y2="28" 
-        stroke="url(#g1)" 
-        stroke-width="2" 
+  <!-- Speed Meter -->
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+  <path d="M 15 32 A 17 17 0 0 1 49 32" 
+        fill="none" 
+        stroke="url(#acc2)" 
+        stroke-width="4" 
         stroke-linecap="round"/>
   
-  <!-- Scroll Wheel -->
-  <rect x="29" y="19" width="6" height="12" rx="3" 
-        fill="url(#g1)" 
-        opacity="0.7"/>
+  <!-- Pointer -->
+  <g transform="rotate(-45 32 32)">
+    <line x1="32" y1="32" x2="32" y2="18" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="32" cy="32" r="3" fill="#ffffff"/>
+  </g>
   
-  <!-- Click Effects -->
-  <circle cx="47" cy="26" r="2.5" fill="url(#g2)" opacity="0.9"/>
-  <circle cx="50" cy="35" r="2" fill="url(#g2)" opacity="0.8"/>
-  <circle cx="48" cy="44" r="2.5" fill="url(#g2)" opacity="0.9"/>
+  <!-- Cursor -->
+  <g transform="translate(28, 36)">
+    <path d="M 0 0 L 0 10 L 3 8 L 5 12 L 7 11 L 5 7 L 8 7 Z" 
+          fill="#ffffff" 
+          stroke="#333" 
+          stroke-width="0.5"/>
+  </g>
   
-  <circle cx="17" cy="28" r="2" fill="url(#g2)" opacity="0.8"/>
-  <circle cx="14" cy="36" r="2.5" fill="url(#g2)" opacity="0.9"/>
-  <circle cx="16" cy="44" r="2" fill="url(#g2)" opacity="0.8"/>
+  <!-- Lightning -->
+  <path d="M 48 22 L 44 28 L 47 28 L 42 36 L 48 30 L 45 30 Z" 
+        fill="url(#acc2)"/>
 </svg>
-
