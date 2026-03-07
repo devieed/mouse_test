@@ -37,6 +37,22 @@
         </div>
       </div>
 
+      <!-- Level progress bar: current level (left) → next level (right) -->
+      <div class="progress-section">
+        <span class="progress-label progress-current">{{ progressCurrentLabel }}</span>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" :style="{ width: displayProgressPercent + '%' }"></div>
+        </div>
+        <span class="progress-label progress-next">{{ progressNextLabel }}</span>
+      </div>
+
+      <!-- Live CPS milestone message (above test area so not covered) -->
+      <Transition name="milestone">
+        <div v-if="milestoneMessage" class="milestone-toast" role="status">
+          {{ milestoneMessage }}
+        </div>
+      </Transition>
+
       <!-- Test Area -->
       <div 
         class="test-area"
@@ -55,7 +71,7 @@
       </button>
 
       <!-- How to Use Section -->
-      <section class="info-section">
+      <section class="info-section" id="how-to-use">
         <h2 class="section-title">{{ t('howToUse.title') }}</h2>
         <div class="steps-container">
           <div class="step-card">
@@ -77,7 +93,7 @@
       </section>
 
       <!-- Features Section -->
-      <section class="info-section features-section">
+      <section class="info-section features-section" id="features">
         <h2 class="section-title">{{ t('features.title') }}</h2>
         <div class="features-grid">
           <div class="feature-item">
@@ -107,8 +123,58 @@
         </div>
       </section>
 
+      <!-- CPS Level & Game Guide Section -->
+      <section class="info-section cps-guide-section" id="cps-guide">
+        <h2 class="section-title">{{ t('cpsGuide.title') }}</h2>
+        <p class="cps-guide-intro">{{ t('cpsGuide.intro') }}</p>
+        <div class="cps-guide-table-wrapper">
+          <table class="cps-guide-table">
+            <thead>
+              <tr>
+                <th>{{ t('cpsGuide.level') }}</th>
+                <th>{{ t('cpsGuide.cpsRange') }}</th>
+                <th>{{ t('cpsGuide.description') }}</th>
+                <th>{{ t('cpsGuide.games') }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ t('cpsGuide.row1Level') }}</td>
+                <td><strong>{{ t('cpsGuide.row1Range') }}</strong></td>
+                <td>{{ t('cpsGuide.row1Desc') }}</td>
+                <td>{{ t('cpsGuide.row1Games') }}</td>
+              </tr>
+              <tr>
+                <td>{{ t('cpsGuide.row2Level') }}</td>
+                <td><strong>{{ t('cpsGuide.row2Range') }}</strong></td>
+                <td>{{ t('cpsGuide.row2Desc') }}</td>
+                <td>{{ t('cpsGuide.row2Games') }}</td>
+              </tr>
+              <tr>
+                <td>{{ t('cpsGuide.row3Level') }}</td>
+                <td><strong>{{ t('cpsGuide.row3Range') }}</strong></td>
+                <td>{{ t('cpsGuide.row3Desc') }}</td>
+                <td>{{ t('cpsGuide.row3Games') }}</td>
+              </tr>
+              <tr>
+                <td>{{ t('cpsGuide.row4Level') }}</td>
+                <td><strong>{{ t('cpsGuide.row4Range') }}</strong></td>
+                <td>{{ t('cpsGuide.row4Desc') }}</td>
+                <td>{{ t('cpsGuide.row4Games') }}</td>
+              </tr>
+              <tr>
+                <td>{{ t('cpsGuide.row5Level') }}</td>
+                <td><strong>{{ t('cpsGuide.row5Range') }}</strong></td>
+                <td>{{ t('cpsGuide.row5Desc') }}</td>
+                <td>{{ t('cpsGuide.row5Games') }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <!-- FAQ Section -->
-      <section class="info-section faq-section">
+      <section class="info-section faq-section" id="faq">
         <h2 class="section-title">{{ t('faq.title') }}</h2>
         <div class="faq-container">
           <details class="faq-item">
@@ -158,17 +224,12 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useSeoMeta } from './composables/useSeoMeta'
 import i18n, { updateURLLanguage } from './i18n'
 
 const { t, locale } = useI18n()
-
-// SEO meta management
-onMounted(() => {
-  useSeoMeta(i18n)
-})
 
 const leftClickCount = ref(0)
 const rightClickCount = ref(0)
@@ -181,6 +242,74 @@ let rightClickTimes = []
 const speedWindow = 1000 // 1秒时间窗口
 
 const currentLocale = ref(locale.value)
+
+// Live milestone: show message when user reaches 5, 7, 10, 15 CPS (once per tier per session)
+const lastMilestoneShown = ref(0)
+const milestoneKey = ref('') // 'at5' | 'at7' | 'at10' | 'at15' — use key so message updates when locale changes
+const milestoneMessage = computed(() => milestoneKey.value ? t('cpsReached.' + milestoneKey.value) : '')
+
+const currentMaxCps = computed(() => Math.max(leftClickSpeed.value, rightClickSpeed.value))
+
+// Progress bar: current tier (1-5) and fill % toward next tier
+const progressTier = computed(() => {
+  const cps = currentMaxCps.value
+  if (cps < 5) return 1
+  if (cps < 7) return 2
+  if (cps < 10) return 3
+  if (cps < 15) return 4
+  return 5
+})
+
+const progressPercent = computed(() => {
+  const cps = currentMaxCps.value
+  if (cps < 5) return Math.min(100, (cps / 5) * 100)
+  if (cps < 7) return Math.min(100, ((cps - 5) / 2) * 100)
+  if (cps < 10) return Math.min(100, ((cps - 7) / 3) * 100)
+  if (cps < 15) return Math.min(100, ((cps - 10) / 5) * 100)
+  return 100
+})
+
+const progressCurrentLabel = computed(() => t('cpsGuide.row' + progressTier.value + 'Level'))
+const progressNextLabel = computed(() =>
+  progressTier.value < 5 ? t('cpsGuide.row' + (progressTier.value + 1) + 'Level') : t('progress.maxReached')
+)
+
+// Smoothed progress for the bar: lerps toward progressPercent so bar grows/shrinks smoothly
+const displayProgressPercent = ref(0)
+let rafId = 0
+function tick() {
+  const target = progressPercent.value
+  const current = displayProgressPercent.value
+  displayProgressPercent.value = current + (target - current) * 0.1
+  rafId = requestAnimationFrame(tick)
+}
+onMounted(() => {
+  useSeoMeta(i18n)
+  rafId = requestAnimationFrame(tick)
+})
+onUnmounted(() => cancelAnimationFrame(rafId))
+
+watch(currentMaxCps, (maxCps) => {
+  if (maxCps >= 15 && lastMilestoneShown.value < 15) {
+    lastMilestoneShown.value = 15
+    milestoneKey.value = 'at15'
+    return
+  }
+  if (maxCps >= 10 && lastMilestoneShown.value < 10) {
+    lastMilestoneShown.value = 10
+    milestoneKey.value = 'at10'
+    return
+  }
+  if (maxCps >= 7 && lastMilestoneShown.value < 7) {
+    lastMilestoneShown.value = 7
+    milestoneKey.value = 'at7'
+    return
+  }
+  if (maxCps >= 5 && lastMilestoneShown.value < 5) {
+    lastMilestoneShown.value = 5
+    milestoneKey.value = 'at5'
+  }
+})
 
 const handleLeftClick = () => {
   isActive.value = true
@@ -232,6 +361,9 @@ const reset = () => {
   leftClickTimes = []
   rightClickTimes = []
   isActive.value = false
+  lastMilestoneShown.value = 0
+  milestoneKey.value = ''
+  displayProgressPercent.value = 0
   
   // 发送Google Analytics事件
   if (window.gtag) {
@@ -363,6 +495,74 @@ const changeLanguage = () => {
   color: #888;
 }
 
+/* Level progress bar */
+.progress-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 20px 24px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2c3e50;
+  flex-shrink: 0;
+  min-width: 4.5em;
+}
+
+.progress-label.progress-current {
+  text-align: right;
+}
+
+.progress-label.progress-next {
+  text-align: left;
+  color: #667eea;
+}
+
+.progress-bar-wrap {
+  flex: 1;
+  height: 12px;
+  background: #e9ecef;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 999px;
+  transition: width 0.08s ease-out;
+}
+
+@media (max-width: 600px) {
+  .progress-section {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .progress-label {
+    min-width: auto;
+    font-size: 0.85rem;
+  }
+  .progress-label.progress-current {
+    order: 1;
+    width: 50%;
+    text-align: left;
+  }
+  .progress-label.progress-next {
+    order: 3;
+    width: 50%;
+    text-align: right;
+  }
+  .progress-bar-wrap {
+    order: 2;
+    width: 100%;
+  }
+}
+
 /* Test Area */
 .test-area {
   background: white;
@@ -410,6 +610,31 @@ const changeLanguage = () => {
 .test-hint {
   font-size: 0.95rem;
   color: #888;
+}
+
+/* Live CPS milestone toast */
+.milestone-toast {
+  margin: 16px 20px 24px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  line-height: 1.5;
+}
+
+.milestone-enter-active,
+.milestone-leave-active {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.milestone-enter-from,
+.milestone-leave-to {
+  opacity: 0;
+  transform: translateY(-12px);
 }
 
 /* Reset Button */
@@ -597,6 +822,80 @@ const changeLanguage = () => {
 .faq-item[open] summary {
   background: #e9ecef;
   border-bottom: 1px solid #dee2e6;
+}
+
+/* CPS Guide Section */
+.cps-guide-section {
+  margin-top: 20px;
+}
+
+.cps-guide-intro {
+  max-width: 800px;
+  margin: 0 auto 24px;
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.cps-guide-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  background: #fafbfc;
+}
+
+.cps-guide-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.cps-guide-table th,
+.cps-guide-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.cps-guide-table th {
+  background: #667eea;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cps-guide-table th:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+.cps-guide-table th:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.cps-guide-table tbody tr:hover {
+  background: #f0f2f5;
+}
+
+.cps-guide-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cps-guide-table td:first-child {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.cps-guide-table td:nth-child(2) {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 768px) {
+  .cps-guide-table th,
+  .cps-guide-table td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
 }
 
 /* Language Selector - Inline in Header */
