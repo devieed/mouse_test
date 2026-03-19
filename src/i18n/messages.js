@@ -2,11 +2,12 @@ export default {
   'ko': {
     meta: {
       title: '마우스 클릭 테스트 - CPS 측정기 | 클릭속도 측정 · 클릭 테스트 · 우클릭 테스트',
-      description: '무료 온라인 마우스 클릭 테스트(CPS 테스트). 클릭속도 측정, 좌클릭·우클릭 실시간 측정, CPS 측정기. 온라인 마우스 클릭 카운터(online mouse click counter). 광클·우클릭 테스트, 게이밍·마인크래프트 PVP 훈련. 다운로드 없이 바로 사용.',
-      keywords: '마우스 클릭 테스트, 마우스 클릭 속도 테스트, 클릭속도 테스트, 點擊速度測試, 클릭 속도 측정, 클릭 속도 테스트, cps 측정기, 클릭 테스트, mouse click speed test, cps測試, 클릭속도 측정, 點擊測試, cps 테스트, 마우스 클릭 속도, 滑鼠點擊測試, cps test right click, cps test, mouse click test, mouse click counter, online mouse click counter, click counter, right click cps test, left click cps test, cps test online, free cps test, 마우스 속도 테스트, 마우스 테스트 사이트, 우클릭 테스트'
+      description: '무료 온라인 마우스 클릭 테스트(CPS 테스트). 클릭속도 측정, 좌클릭·우클릭 실시간 측정, CPS 측정기. 온라인 마우스 클릭 카운터(online mouse click counter)와 CPS tester online으로 클릭 속도를 실시간 확인하세요. 광클·우클릭 테스트, 게이밍·마인크래프트 PVP 훈련. 다운로드 없이 바로 사용.',
+      keywords: '마우스 클릭 테스트, 마우스 클릭 속도 테스트, 클릭속도 테스트, 點擊速度測試, 클릭 속도 측정, 클릭 속도 테스트, cps 측정기, 클릭 테스트, mouse click speed test, cps測試, 클릭속도 측정, 點擊測試, cps 테스트, 마우스 클릭 속도, 滑鼠點擊測試, cps test right click, cps test, mouse click test, mouse click counter, online mouse click counter, click counter, right click cps test, left click cps test, cps test online, cps tester online, free cps test, 마우스 속도 테스트, 마우스 테스트 사이트, 우클릭 테스트'
     },
     title: '마우스 클릭 속도 테스트',
     subtitle: '실시간 CPS 측정으로 정확한 마우스 클릭 속도를 확인하세요',
+    seoInline: '온라인 마우스 클릭 카운터(online mouse click counter) & CPS tester online으로 실시간 CPS를 측정하세요',
     leftClick: '좌클릭',
     rightClick: '우클릭',
     leftClickSpeed: '좌클릭 속도',
@@ -102,12 +103,13 @@ export default {
   
   'en': {
     meta: {
-      title: 'CPS Test - Click Speed Test | Mouse Click Counter & Right Click Test',
-      description: 'Free online CPS test and click speed test. Online mouse click counter — measure left and right click CPS in real-time. Mouse click counter, click test, right click cps test. Kohi click practice, Minecraft PVP. No download required.',
-      keywords: 'cps test, click test, click speed test, mouse click speed test, mouse click test, mouse click counter, online mouse click counter, click counter, right click cps test, left click cps test, cps test online, free cps test, cps test right click, clicking speed test, mouse clicker test, kohi click test, Minecraft CPS'
+      title: 'CPS Tester Online - Click Speed Test | Mouse Click Counter & Right Click Test',
+      description: 'Free online CPS test and click speed test. CPS tester online with an online mouse click counter — measure left and right click CPS in real-time. Mouse click counter, click test, right click cps test. Kohi click practice, Minecraft PVP. No download required.',
+      keywords: 'cps test, click test, click speed test, mouse click speed test, mouse click test, mouse click counter, online mouse click counter, cps tester online, cps test online, click counter, right click cps test, left click cps test, free cps test, cps test right click, clicking speed test, mouse clicker test, kohi click test, Minecraft CPS'
     },
-    title: 'Mouse Click Speed Test',
-    subtitle: 'Measure your exact click speed with real-time CPS tracking',
+    title: 'CPS Tester Online - Mouse Click Speed Test',
+    subtitle: 'Measure your exact click speed with real-time CPS tracking. Online mouse click counter & CPS tester online.',
+    seoInline: 'Online mouse click counter & CPS tester online',
     leftClick: 'Left Click',
     rightClick: 'Right Click',
     leftClickSpeed: 'Left Click Speed',
@@ -204,11 +206,12 @@ export default {
   'zh-CN': {
     meta: {
       title: 'CPS测试 - 鼠标点击速度测试 | 点击计数器与右键点击测试',
-      description: '免费在线CPS测试与点击速度测试。实时测量左键、右键每秒点击次数，点击计数器。支持Minecraft PVP、电竞手速训练。无需下载，即开即用。',
-      keywords: 'CPS测试, 点击速度测试, 点击测试, 鼠标点击测试, 鼠标点击速度测试, 测试点击速度, 点击速度, 点击计数器, online mouse click counter, 在线鼠标点击计数器, 右键点击测试, 左键测试, 在线CPS测试, 免费CPS测试, 每秒点击次数, 手速测试, 游戏鼠标测试, Minecraft CPS'
+      description: '免费在线CPS测试与点击速度测试。实时测量左键、右键每秒点击次数，在线鼠标点击计数器（online mouse click counter）。同时提供 CPS tester online。支持Minecraft PVP、电竞手速训练。无需下载，即开即用。',
+      keywords: 'CPS测试, 点击速度测试, 点击测试, 鼠标点击测试, 鼠标点击速度测试, 测试点击速度, 点击速度, 点击计数器, online mouse click counter, 在线鼠标点击计数器, cps tester online, 右键点击测试, 左键测试, 在线CPS测试, 免费CPS测试, 每秒点击次数, 手速测试, 游戏鼠标测试, Minecraft CPS'
     },
     title: '鼠标点击速度测试',
     subtitle: '通过实时CPS测量了解您的精确点击速度',
+    seoInline: '在线鼠标点击计数器（online mouse click counter）与 CPS tester online，实时测量你的 CPS',
     leftClick: '左键点击',
     rightClick: '右键点击',
     leftClickSpeed: '左键点击速度',
@@ -305,11 +308,12 @@ export default {
   'zh-TW': {
     meta: {
       title: '點擊速度測試 - CPS測試 | 滑鼠點擊測試與右鍵點擊測試',
-      description: '免費線上CPS測試與點擊速度測試。即時測量左鍵、右鍵每秒點擊次數，點擊計數器。支援Minecraft PVP、電競手速訓練。無需下載。',
-      keywords: '點擊速度測試, CPS測試, 點擊測試, 滑鼠點擊測試, 滑鼠點擊速度測試, 測點擊速度, 點擊速度, 點擊計數器, online mouse click counter, 線上滑鼠點擊計數器, 右鍵點擊測試, 線上CPS測試, 每秒點擊次數, 手速測試, 遊戲滑鼠測試, Minecraft CPS'
+      description: '免費線上CPS測試與點擊速度測試。即時測量左鍵、右鍵每秒點擊次數，並提供線上滑鼠點擊計數器（online mouse click counter）。同時支援 CPS tester online。支援Minecraft PVP、電競手速訓練。無需下載。',
+      keywords: '點擊速度測試, CPS測試, 點擊測試, 滑鼠點擊測試, 滑鼠點擊速度測試, 測點擊速度, 點擊速度, 點擊計數器, online mouse click counter, 線上滑鼠點擊計數器, cps tester online, 右鍵點擊測試, 線上CPS測試, 每秒點擊次數, 手速測試, 遊戲滑鼠測試, Minecraft CPS'
     },
     title: '滑鼠點擊速度測試',
     subtitle: '透過即時CPS測量了解您的精確點擊速度',
+    seoInline: '線上滑鼠點擊計數器（online mouse click counter）與 CPS tester online，即時測量你的 CPS',
     leftClick: '左鍵點擊',
     rightClick: '右鍵點擊',
     leftClickSpeed: '左鍵點擊速度',
@@ -406,11 +410,12 @@ export default {
   'ja': {
     meta: {
       title: 'CPSテスト - クリック速度テスト | マウスクリックカウンター・右クリックテスト',
-      description: '無料オンラインCPSテスト・クリック速度テスト。左クリック・右クリックのCPSをリアルタイム測定。クリックカウンター、クリックテスト。Minecraft PVP・ゲーミング練習。ダウンロード不要。',
-      keywords: 'CPSテスト, クリックテスト, クリック速度テスト, マウスクリックテスト, クリックカウンター, online mouse click counter, mouse click counter, 右クリックテスト, 秒間クリック数, オンラインCPSテスト, click test, click speed test, mouse click test, kohi クリックテスト, Minecraft CPS'
+      description: '無料オンラインCPSテスト・クリック速度テスト。左クリック・右クリックのCPSをリアルタイム測定。クリックカウンターに加えて、CPS tester online（online mouse click counter）で正確なクリック速度を確認できます。Minecraft PVP・ゲーミング練習。ダウンロード不要。',
+      keywords: 'CPSテスト, クリックテスト, クリック速度テスト, マウスクリックテスト, クリックカウンター, online mouse click counter, mouse click counter, cps tester online, 右クリックテスト, 秒間クリック数, オンラインCPSテスト, click test, click speed test, mouse click test, kohi クリックテスト, Minecraft CPS'
     },
     title: 'マウスクリック速度テスト',
     subtitle: 'リアルタイムCPS測定で正確なクリック速度を確認',
+    seoInline: 'オンラインマウスクリックカウンター（online mouse click counter）と CPS tester online で、CPSをリアルタイム測定',
     leftClick: '左クリック',
     rightClick: '右クリック',
     leftClickSpeed: '左クリック速度',
@@ -507,11 +512,12 @@ export default {
   'de': {
     meta: {
       title: 'CPS-Test - Klickgeschwindigkeitstest | Mausklick-Zähler & Rechtsklick-Test',
-      description: 'Kostenloser Online-CPS-Test und Klickgeschwindigkeitstest. Links- und Rechtsklick-CPS in Echtzeit messen. Klickzähler, Click-Test. Minecraft PVP, Gaming. Kein Download nötig.',
-      keywords: 'CPS-Test, Klick-Test, Klickgeschwindigkeitstest, Mausklick-Test, Mausklick-Zähler, online mouse click counter, Klickzähler, Rechtsklick-Test, Online CPS-Test, click test, click speed test, mouse click counter, Minecraft CPS'
+      description: 'Kostenloser Online-CPS-Test und Klickgeschwindigkeitstest. Online mouse click counter und CPS tester online — Links- und Rechtsklick-CPS in Echtzeit messen. Klickzähler, Click-Test. Minecraft PVP, Gaming. Kein Download nötig.',
+      keywords: 'CPS-Test, Klick-Test, Klickgeschwindigkeitstest, Mausklick-Test, Mausklick-Zähler, online mouse click counter, cps tester online, Klickzähler, Rechtsklick-Test, Online CPS-Test, click test, click speed test, mouse click counter, Minecraft CPS'
     },
     title: 'Mausklick-Geschwindigkeitstest',
     subtitle: 'Messen Sie Ihre genaue Klickgeschwindigkeit mit Echtzeit-CPS-Tracking',
+    seoInline: 'Online mouse click counter & CPS tester online — CPS in Echtzeit messen',
     leftClick: 'Linksklick',
     rightClick: 'Rechtsklick',
     leftClickSpeed: 'Linksklick-Geschwindigkeit',
@@ -608,11 +614,12 @@ export default {
   'fr': {
     meta: {
       title: 'Test CPS - Test de vitesse de clic | Compteur de clics & Test clic droit',
-      description: 'Test CPS et test de vitesse de clic en ligne gratuits. Mesurez le CPS du clic gauche et droit en temps réel. Compteur de clics, click test. Minecraft PVP, gaming. Sans téléchargement.',
-      keywords: 'test CPS, click test, test de vitesse de clic, test de clic de souris, compteur de clics, online mouse click counter, mouse click counter, test clic droit, test CPS en ligne, clics par seconde, click speed test, Minecraft CPS'
+      description: 'Test CPS et test de vitesse de clic en ligne gratuits. Online mouse click counter et CPS tester online — mesurez le CPS du clic gauche et droit en temps réel. Compteur de clics, click test. Minecraft PVP, gaming. Sans téléchargement.',
+      keywords: 'test CPS, click test, test de vitesse de clic, test de clic de souris, compteur de clics, online mouse click counter, mouse click counter, cps tester online, test clic droit, test CPS en ligne, clics par seconde, click speed test, Minecraft CPS'
     },
     title: 'Test de vitesse de clic de souris',
     subtitle: 'Mesurez votre vitesse de clic exacte avec le suivi CPS en temps réel',
+    seoInline: 'Online mouse click counter & CPS tester online — mesurez votre CPS en temps réel',
     leftClick: 'Clic gauche',
     rightClick: 'Clic droit',
     leftClickSpeed: 'Vitesse de clic gauche',

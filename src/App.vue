@@ -18,6 +18,7 @@
             <option value="fr">🇫🇷 Français</option>
           </select>
         </div>
+        <div class="seo-inline">{{ t('seoInline') }}</div>
       </header>
 
       <!-- Stats Display -->
@@ -424,6 +425,15 @@ const changeLanguage = () => {
   color: #666;
   margin-bottom: 40px;
   line-height: 1.6;
+}
+
+.seo-inline {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #667eea;
+  text-align: center;
 }
 
 /* Stats Container */
