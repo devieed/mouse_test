@@ -1,8 +1,8 @@
 export default {
   'ko': {
     meta: {
-      title: '마우스 클릭 테스트·마우스 클릭 속도 | CPS 측정기·클릭속도·모바일',
-      description: '마우스 클릭 속도·클릭속도(CPS) 무료 측정 사이트. CPS 측정기, 좌클릭·우클릭 CPS, 클릭 카운터, 초당 클릭 테스트. 스마트폰 모바일 브라우저에서도 탭으로 연타·CPS 확인. 반응·순발력은 별도 탭. 가입·설치 없음.',
+      title: '2026 마우스 클릭 테스트 (CPS 측정) - 당신의 반응 속도는 상위 몇 %입니까?',
+      description: '0.1초의 차이! 정확한 CPS 측정과 실시간 클릭 속도 분석. 전 세계 유저와 기록을 비교해보세요.',
       keywords: '마우스 클릭 테스트, 마우스 클릭 속도 테스트, 마우스 클릭 속도, 마우스 속도 테스트, 클릭속도 테스트, 클릭 속도 테스트, CPS 테스트, CPS 측정기, CPS 측정, 클릭 테스트, 마우스 테스트 사이트, 클릭속도 측정, 우클릭 테스트, 좌클릭, 초당 클릭, 모바일 CPS, 클릭 카운터, 반응속도 테스트, 순발력 테스트',
       titleReaction: '반응속도·순발력 테스트 | 마우스 반응 속도·리액션 타임 | 무료',
       descriptionReaction: '온라인 순발력·반응속도 테스트: 초록 화면이 빨강으로 바뀌면 바로 클릭, ms 측정. 마우스 반응 속도·클릭 반응 연습에 활용. PC·모바일 브라우저, 설치 불필요.',
@@ -142,8 +142,8 @@ export default {
   
   'en': {
     meta: {
-      title: 'Mouse Click Speed Test & CPS Test | Right/Left Click, Mobile, Free',
-      description: 'Free mouse click speed test and CPS test in your browser: left-click and right-click CPS, click counter, clicks per second. Works as a mobile CPS test on phones and tablets. Mouse click test + reaction time tab. No signup.',
+      title: 'CPS Test 2026: Official Mouse Click Speed Test (Check Your Clicks Per Second)',
+      description: 'Measure your clicking speed accurately. Professional-grade CPS counter for gamers. Can you beat the world record? No lag, instant results.',
       keywords: 'mouse click speed test, cps test, click test, click speed test, cps test right click, cps test left click, right click cps test, left click cps test, cps test mobile, mobile cps test, mouse click test, mouse speed test, cps counter, click counter, mouse tester, clicking speed test, free cps test, cps test online',
       titleReaction: 'Reaction Time Test Online | Reflex & Human Reaction Benchmark',
       descriptionReaction: 'Free online reaction time test: wait on green, click when the screen turns red—timing in milliseconds. Check your reflexes and compare human reaction time. Runs in the browser, no install.',
