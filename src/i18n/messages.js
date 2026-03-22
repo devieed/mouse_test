@@ -1,13 +1,19 @@
 export default {
   'ko': {
     meta: {
-      title: '마우스 클릭 테스트 - CPS 측정기 | 클릭속도 측정 · 클릭 테스트 · 우클릭 테스트',
-      description: '무료 온라인 마우스 클릭 테스트(CPS 테스트). 클릭속도 측정, 좌클릭·우클릭 실시간 측정, CPS 측정기. 온라인 마우스 클릭 카운터(online mouse click counter)와 CPS tester online으로 클릭 속도를 실시간 확인하세요. 광클·우클릭 테스트, 게이밍·마인크래프트 PVP 훈련. 다운로드 없이 바로 사용.',
-      keywords: '마우스 클릭 테스트, 마우스 클릭 속도 테스트, 클릭속도 테스트, 點擊速度測試, 클릭 속도 측정, 클릭 속도 테스트, cps 측정기, 클릭 테스트, mouse click speed test, cps測試, 클릭속도 측정, 點擊測試, cps 테스트, 마우스 클릭 속도, 滑鼠點擊測試, cps test right click, cps test, mouse click test, mouse click counter, online mouse click counter, click counter, right click cps test, left click cps test, cps test online, cps tester online, free cps test, 마우스 속도 테스트, 마우스 테스트 사이트, 우클릭 테스트'
+      title: '마우스 클릭 테스트·마우스 클릭 속도 | CPS 측정기·클릭속도·모바일',
+      description: '마우스 클릭 속도·클릭속도(CPS) 무료 측정 사이트. CPS 측정기, 좌클릭·우클릭 CPS, 클릭 카운터, 초당 클릭 테스트. 스마트폰 모바일 브라우저에서도 탭으로 연타·CPS 확인. 반응·순발력은 별도 탭. 가입·설치 없음.',
+      keywords: '마우스 클릭 테스트, 마우스 클릭 속도 테스트, 마우스 클릭 속도, 마우스 속도 테스트, 클릭속도 테스트, 클릭 속도 테스트, CPS 테스트, CPS 측정기, CPS 측정, 클릭 테스트, 마우스 테스트 사이트, 클릭속도 측정, 우클릭 테스트, 좌클릭, 초당 클릭, 모바일 CPS, 클릭 카운터, 반응속도 테스트, 순발력 테스트',
+      titleReaction: '반응속도·순발력 테스트 | 마우스 반응 속도·리액션 타임 | 무료',
+      descriptionReaction: '온라인 순발력·반응속도 테스트: 초록 화면이 빨강으로 바뀌면 바로 클릭, ms 측정. 마우스 반응 속도·클릭 반응 연습에 활용. PC·모바일 브라우저, 설치 불필요.',
+      keywordsReaction: '반응속도 테스트, 순발력 테스트, 마우스 반응속도, 마우스 반응 속도 테스트, 리액션 테스트, 반응 시간, 레플렉스, 인간 반응 시간, 무료'
     },
-    title: '마우스 클릭 속도 테스트',
-    subtitle: '실시간 CPS 측정으로 정확한 마우스 클릭 속도를 확인하세요',
-    seoInline: '온라인 마우스 클릭 카운터(online mouse click counter) & CPS tester online으로 실시간 CPS를 측정하세요',
+    title: '마우스 클릭 & 반응속도 테스트',
+    subtitle: 'CPS·클릭속도(좌·우클릭)와 반응·순발력 테스트를 탭에서 고르세요. 모바일에서도 이용 가능합니다.',
+    tabs: {
+      cps: 'CPS · 클릭속도',
+      reaction: '반응속도'
+    },
     leftClick: '좌클릭',
     rightClick: '우클릭',
     leftClickSpeed: '좌클릭 속도',
@@ -19,6 +25,27 @@ export default {
     testHint: '좌클릭 또는 우클릭으로 속도 측정',
     reset: '초기화',
     selectLanguage: '언어 선택',
+
+    reaction: {
+      title: '반응속도 테스트',
+      subtitle: '초록 화면에서 기다렸다가 빨강으로 바뀌면 최대한 빠르게 클릭하세요.',
+      precisionNote: '측정: 밀리초(ms). 브라우저 고해상도 타이머(performance.now)를 사용합니다.',
+      startHint: '아래 영역을 클릭하면 테스트가 시작됩니다',
+      startBtn: '시작하기',
+      waiting: '빨간색이 될 때까지 클릭하지 마세요…',
+      clickNow: '지금 클릭!',
+      tooEarly: '너무 빨랐어요! 빨간색으로 바뀐 뒤에 클릭해 주세요.',
+      tryAgain: '다시 도전',
+      resultLabel: '반응 시간',
+      msUnit: 'ms',
+      tierElite: '엘리트급! 프로에 가까운 반응 속도입니다.',
+      tierExcellent: '매우 뛰어납니다! 게이밍에 유리한 반응이에요.',
+      tierVeryGood: '아주 좋아요. 꾸준히 하면 더 빨라질 수 있어요.',
+      tierGood: '좋은 편이에요. 평균보다 빠른 반응입니다.',
+      tierAverage: '평균적인 반응이에요. 집중하면 개선할 수 있어요.',
+      tierSlow: '조금 여유가 필요해요. 화면 변화에만 집중해 보세요.',
+      tierVerySlow: '괜찮아요. 반복 연습으로 단축할 수 있어요.'
+    },
     
     howToUse: {
       title: '사용 방법',
@@ -51,7 +78,19 @@ export default {
       q4: '왜 우클릭도 테스트하나요?',
       a4: '일부 게임(예: 마인크래프트)에서는 우클릭 속도도 중요합니다. 블록 배치나 특정 동작에 우클릭이 사용되기 때문에 양쪽 버튼 모두 테스트할 수 있도록 제공합니다.',
       q5: '마인크래프트에서 CPS가 왜 중요한가요?',
-      a5: '마인크래프트 PVP에서 높은 CPS는 더 많은 콤보와 넉백을 만들어 전투에서 유리합니다. 대부분의 경쟁 서버에서 8-10 CPS 이상이 권장되며, 15 CPS 이상이면 매우 우수한 수준입니다.'
+      a5: '마인크래프트 PVP에서 높은 CPS는 더 많은 콤보와 넉백을 만들어 전투에서 유리합니다. 대부분의 경쟁 서버에서 8-10 CPS 이상이 권장되며, 15 CPS 이상이면 매우 우수한 수준입니다.',
+      q6: '클릭 속도 테스트와 CPS 테스트가 같은 건가요?',
+      a6: '같은 종류의 도구를 가리키는 말입니다. 초당 클릭 수(CPS), 클릭 스피드, 클리커 속도 테스트 등으로 불리며, 모두 마우스를 얼마나 빨리 클릭하는지 측정합니다.',
+      q7: '반응속도 테스트는 무엇인가요?',
+      a7: '시각 신호에 얼마나 빨리 반응하는지 재는 테스트입니다. 화면이 빨강으로 바뀐 뒤 클릭할 때까지의 지연을 밀리초로 기록합니다. 간단한 인간 반응 벤치마크에 가깝습니다.',
+      q8: '사람의 평균 반응속도는 어느 정도인가요?',
+      a8: '시각 자극에 대한 반응은 보통 약 150~300ms 사이인 경우가 많지만, 나이, 집중도, 모니터 지연, 마우스 등에 따라 달라집니다. 의학 진단이 아니라 개인 기록용으로 참고하세요.',
+      q9: '클릭 카운터나 우클릭 CPS도 되나요?',
+      a9: '네. 메인 패널에서 좌·우클릭 각각 총 클릭 수와 CPS를 실시간으로 보여 주므로, 클릭 카운터 겸 우클릭 CPS 측정에 쓸 수 있습니다.',
+      q10: '모바일에서도 CPS 테스트가 되나요?',
+      a10: '네. 크롬·사파리 등 모바일 브라우저에서 열어 테스트 영역을 연타하면 좌클릭과 동일하게 CPS가 측정됩니다. 우클릭(길게 누르기·메뉴)은 기기마다 다를 수 있습니다.',
+      q11: '좌클릭과 우클릭 CPS를 동시에 볼 수 있나요?',
+      a11: '네. 한 화면에서 왼쪽은 좌클릭 CPS·총 클릭, 오른쪽은 우클릭 CPS·총 클릭을 동시에 실시간으로 보여 줍니다. 교대 클릭 연습에도 쓸 수 있습니다.'
     },
     
     cpsGuide: {
@@ -103,13 +142,19 @@ export default {
   
   'en': {
     meta: {
-      title: 'CPS Tester Online - Click Speed Test | Mouse Click Counter & Right Click Test',
-      description: 'Free online CPS test and click speed test. CPS tester online with an online mouse click counter — measure left and right click CPS in real-time. Mouse click counter, click test, right click cps test. Kohi click practice, Minecraft PVP. No download required.',
-      keywords: 'cps test, click test, click speed test, mouse click speed test, mouse click test, mouse click counter, online mouse click counter, cps tester online, cps test online, click counter, right click cps test, left click cps test, free cps test, cps test right click, clicking speed test, mouse clicker test, kohi click test, Minecraft CPS'
+      title: 'Mouse Click Speed Test & CPS Test | Right/Left Click, Mobile, Free',
+      description: 'Free mouse click speed test and CPS test in your browser: left-click and right-click CPS, click counter, clicks per second. Works as a mobile CPS test on phones and tablets. Mouse click test + reaction time tab. No signup.',
+      keywords: 'mouse click speed test, cps test, click test, click speed test, cps test right click, cps test left click, right click cps test, left click cps test, cps test mobile, mobile cps test, mouse click test, mouse speed test, cps counter, click counter, mouse tester, clicking speed test, free cps test, cps test online',
+      titleReaction: 'Reaction Time Test Online | Reflex & Human Reaction Benchmark',
+      descriptionReaction: 'Free online reaction time test: wait on green, click when the screen turns red—timing in milliseconds. Check your reflexes and compare human reaction time. Runs in the browser, no install.',
+      keywordsReaction: 'reaction time test, test for reaction time, reaction test, reaction speed test, human reaction time, average reaction time, reflex test, reactions test, human benchmark reaction time'
     },
-    title: 'CPS Tester Online - Mouse Click Speed Test',
-    subtitle: 'Measure your exact click speed with real-time CPS tracking. Online mouse click counter & CPS tester online.',
-    seoInline: 'Online mouse click counter & CPS tester online',
+    title: 'Mouse Click & Reaction Time Test',
+    subtitle: 'CPS / click speed (left & right click) and reaction time—switch tabs above. Works on mobile browsers too.',
+    tabs: {
+      cps: 'CPS / Click speed',
+      reaction: 'Reaction time'
+    },
     leftClick: 'Left Click',
     rightClick: 'Right Click',
     leftClickSpeed: 'Left Click Speed',
@@ -121,6 +166,27 @@ export default {
     testHint: 'Left or right click to measure speed',
     reset: 'Reset',
     selectLanguage: 'Select Language',
+
+    reaction: {
+      title: 'Reaction Time Test',
+      subtitle: 'Stay on green. When the screen turns red, click as fast as you can.',
+      precisionNote: 'Timing in milliseconds (ms) using the browser high-resolution timer (performance.now).',
+      startHint: 'Click the area below to start',
+      startBtn: 'Start',
+      waiting: 'Do not click until it turns red…',
+      clickNow: 'Click now!',
+      tooEarly: 'Too soon! Wait for red, then click.',
+      tryAgain: 'Try again',
+      resultLabel: 'Reaction time',
+      msUnit: 'ms',
+      tierElite: 'Elite—near pro-level reaction.',
+      tierExcellent: 'Excellent—great for competitive gaming.',
+      tierVeryGood: 'Very good. Keep practising to improve.',
+      tierGood: 'Good—faster than many people.',
+      tierAverage: 'Average. Focus on the color change to improve.',
+      tierSlow: 'A bit slow. Watch for red only.',
+      tierVerySlow: 'That’s fine—practice helps shorten your time.'
+    },
     
     howToUse: {
       title: 'How to Use',
@@ -153,7 +219,19 @@ export default {
       q4: 'Why test right click too?',
       a4: 'In some games like Minecraft, right click speed matters for block placement and certain actions. We provide testing for both buttons to cover all gaming scenarios.',
       q5: 'Why is CPS important in Minecraft?',
-      a5: 'In Minecraft PVP, higher CPS creates more combos and knockback, giving you combat advantage. Most competitive servers benefit from 8-10+ CPS, with 15+ CPS being excellent.'
+      a5: 'In Minecraft PVP, higher CPS creates more combos and knockback, giving you combat advantage. Most competitive servers benefit from 8-10+ CPS, with 15+ CPS being excellent.',
+      q6: 'Is a click speed test the same as a CPS test?',
+      a6: 'Yes—the same kind of tool. People search for "click speed test", "clicking speed test", "clicks per second", or "CPS"; all measure how many mouse clicks you can do per second.',
+      q7: 'What is a reaction time test?',
+      a7: 'It measures how fast you respond to a visual cue. Our test records the delay in milliseconds after the screen turns red—similar to simple human-benchmark style checks, not a medical exam.',
+      q8: 'What is a typical human reaction time?',
+      a8: 'Visual reaction often falls around 150–300 ms for many adults, but age, focus, display lag, and your mouse all matter. Use results as a personal benchmark only.',
+      q9: 'Do you have a click counter or right-click CPS test?',
+      a9: 'Yes. The CPS panel shows live totals and CPS for left and right click, so it works as a click counter and as a browser-based right-click CPS test.',
+      q10: 'Does the CPS test work on mobile?',
+      a10: 'Yes. Open the site in Chrome, Safari, or another mobile browser and tap the test area—your taps count like left clicks for CPS. Right click / context menu behavior varies by device.',
+      q11: 'Can I see left-click and right-click CPS at the same time?',
+      a11: 'Yes. One panel shows live left-click CPS and total clicks; the other shows right-click CPS and totals, updated together—useful for alternating-click practice.'
     },
     
     cpsGuide: {
@@ -205,13 +283,19 @@ export default {
   
   'zh-CN': {
     meta: {
-      title: 'CPS测试 - 鼠标点击速度测试 | 点击计数器与右键点击测试',
-      description: '免费在线CPS测试与点击速度测试。实时测量左键、右键每秒点击次数，在线鼠标点击计数器（online mouse click counter）。同时提供 CPS tester online。支持Minecraft PVP、电竞手速训练。无需下载，即开即用。',
-      keywords: 'CPS测试, 点击速度测试, 点击测试, 鼠标点击测试, 鼠标点击速度测试, 测试点击速度, 点击速度, 点击计数器, online mouse click counter, 在线鼠标点击计数器, cps tester online, 右键点击测试, 左键测试, 在线CPS测试, 免费CPS测试, 每秒点击次数, 手速测试, 游戏鼠标测试, Minecraft CPS'
+      title: '鼠标点击测试·点击速度测试 | CPS测试·左右键·手机免费',
+      description: '免费鼠标点击测试与CPS、点击速度测试：左键/右键CPS、点击计数器、每秒点击实时显示。手机浏览器可做移动端CPS测速。反应速度见另一标签。免注册安装。',
+      keywords: '鼠标点击测试, 鼠标点击速度测试, 鼠标速度测试, 点击速度测试, CPS测试, 点击测试, 左键测试, 右键测试, 右键CPS, 点击计数器, 手机CPS测试, 在线CPS, 反应速度测试, 免费',
+      titleReaction: '反应速度测试在线 | 反应时间·人类基准 | 免费',
+      descriptionReaction: '免费在线反应速度测试：绿屏等待，变红后尽快点击，毫秒计时。查看反应时间与反射表现，可作简单人类反应基准参考。浏览器即用，无需安装。',
+      keywordsReaction: '反应速度测试, 反应时间测试, 测试反应时间, 反应测试, 人类反应时间, 平均反应时间, 反射测试, 反应基准, 免费反应测试'
     },
-    title: '鼠标点击速度测试',
-    subtitle: '通过实时CPS测量了解您的精确点击速度',
-    seoInline: '在线鼠标点击计数器（online mouse click counter）与 CPS tester online，实时测量你的 CPS',
+    title: '鼠标点击与反应速度测试',
+    subtitle: 'CPS/点击速度（左键与右键）与反应测试用上方标签切换，手机浏览器也可使用。',
+    tabs: {
+      cps: 'CPS 测速',
+      reaction: '反应速度'
+    },
     leftClick: '左键点击',
     rightClick: '右键点击',
     leftClickSpeed: '左键点击速度',
@@ -223,6 +307,27 @@ export default {
     testHint: '左键或右键点击以测量速度',
     reset: '重置',
     selectLanguage: '选择语言',
+
+    reaction: {
+      title: '反应速度测试',
+      subtitle: '保持绿色界面等待，变红后尽快点击。',
+      precisionNote: '以毫秒(ms)计时，使用浏览器高精度时间 API（performance.now）。',
+      startHint: '点击下方区域开始',
+      startBtn: '开始',
+      waiting: '在变红之前请勿点击…',
+      clickNow: '立即点击！',
+      tooEarly: '点早了！请等屏幕变红后再点击。',
+      tryAgain: '再测一次',
+      resultLabel: '反应时间',
+      msUnit: 'ms',
+      tierElite: '顶尖水平！接近职业反应。',
+      tierExcellent: '非常出色，很适合竞技类游戏。',
+      tierVeryGood: '很好，坚持练习还能更快。',
+      tierGood: '不错，比多数人更快。',
+      tierAverage: '中等水平，专注看颜色变化可以提升。',
+      tierSlow: '略慢，尽量只关注变红瞬间。',
+      tierVerySlow: '没关系，多练几次通常会变快。'
+    },
     
     howToUse: {
       title: '使用方法',
@@ -255,7 +360,19 @@ export default {
       q4: '为什么也要测试右键？',
       a4: '在某些游戏（如Minecraft）中，右键速度对于放置方块和某些动作很重要。我们提供双键测试以覆盖所有游戏场景。',
       q5: 'Minecraft中CPS为什么重要？',
-      a5: '在Minecraft PVP中，更高的CPS可以产生更多连击和击退效果，在战斗中占据优势。大多数竞技服务器中，8-10+ CPS是推荐水平，15+ CPS则非常优秀。'
+      a5: '在Minecraft PVP中，更高的CPS可以产生更多连击和击退效果，在战斗中占据优势。大多数竞技服务器中，8-10+ CPS是推荐水平，15+ CPS则非常优秀。',
+      q6: '点击速度测试和CPS测试是一回事吗？',
+      a6: '是同一类工具。大家常说的点击速度、每秒点击次数、CPS、连点测试，都是测量鼠标一秒内能点击多少次。',
+      q7: '什么是反应速度测试？',
+      a7: '测量您对视觉信号做出动作有多快。本站在屏幕变红后记录您点击的延迟（毫秒），类似简单的人类反应基准测试，不能代替医学检测。',
+      q8: '人的平均反应时间大约多少？',
+      a8: '视觉反应常见约在150～300毫秒之间，但会因年龄、专注度、显示器延迟和鼠标等变化。结果仅供个人对比参考。',
+      q9: '有没有点击计数器或右键CPS？',
+      a9: '有。主面板实时显示左右键总点击数和CPS，既可当点击计数器，也可专门测右键CPS。',
+      q10: '手机上能做CPS测试吗？',
+      a10: '可以。用手机浏览器打开，在测试区连续点击/连点即可测左键同等CPS。右键或长按菜单因机型而异。',
+      q11: '左键和右键CPS能同时看吗？',
+      a11: '可以。左侧卡片显示左键CPS与总点击，右侧显示右键CPS与总点击，同时实时更新，方便左右手交替练习。'
     },
     
     cpsGuide: {
@@ -307,13 +424,19 @@ export default {
   
   'zh-TW': {
     meta: {
-      title: '點擊速度測試 - CPS測試 | 滑鼠點擊測試與右鍵點擊測試',
-      description: '免費線上CPS測試與點擊速度測試。即時測量左鍵、右鍵每秒點擊次數，並提供線上滑鼠點擊計數器（online mouse click counter）。同時支援 CPS tester online。支援Minecraft PVP、電競手速訓練。無需下載。',
-      keywords: '點擊速度測試, CPS測試, 點擊測試, 滑鼠點擊測試, 滑鼠點擊速度測試, 測點擊速度, 點擊速度, 點擊計數器, online mouse click counter, 線上滑鼠點擊計數器, cps tester online, 右鍵點擊測試, 線上CPS測試, 每秒點擊次數, 手速測試, 遊戲滑鼠測試, Minecraft CPS'
+      title: '滑鼠點擊測試·點擊測試 | CPS測試·點擊速度測試·手機免費',
+      description: '免費滑鼠點擊測試、點擊測試與CPS測試：點擊速度、左鍵右鍵CPS、點擊計數即時顯示。手機瀏覽器可測行動版CPS。反應速度另有分頁。免註冊安裝。',
+      keywords: '滑鼠點擊測試, 點擊測試, 點擊速度測試, CPS測試, 測CPS, 滑鼠點擊速度測試, 滑鼠測試, 右鍵測試, 左鍵測試, 點擊計數器, 行動CPS測試, 每秒點擊, 反應速度測試, 免費',
+      titleReaction: '反應速度測試線上 | 反應時間·人類基準 | 免費',
+      descriptionReaction: '免費線上反應速度測試：綠色等待，變紅後盡快點擊，毫秒計時。查看反應時間與反射表現，可作簡單人類反應基準參考。瀏覽器即用，無需安裝。',
+      keywordsReaction: '反應速度測試, 反應時間測試, 測試反應時間, 反應測試, 人類反應時間, 平均反應時間, 反射測試, 反應基準, 免費反應測試'
     },
-    title: '滑鼠點擊速度測試',
-    subtitle: '透過即時CPS測量了解您的精確點擊速度',
-    seoInline: '線上滑鼠點擊計數器（online mouse click counter）與 CPS tester online，即時測量你的 CPS',
+    title: '滑鼠點擊與反應速度測試',
+    subtitle: 'CPS／點擊速度（左鍵與右鍵）與反應測試請用上方分頁切換，手機瀏覽器也可用。',
+    tabs: {
+      cps: 'CPS 測速',
+      reaction: '反應速度'
+    },
     leftClick: '左鍵點擊',
     rightClick: '右鍵點擊',
     leftClickSpeed: '左鍵點擊速度',
@@ -325,6 +448,27 @@ export default {
     testHint: '左鍵或右鍵點擊以測量速度',
     reset: '重置',
     selectLanguage: '選擇語言',
+
+    reaction: {
+      title: '反應速度測試',
+      subtitle: '綠色時等待，變紅後盡快點擊。',
+      precisionNote: '以毫秒(ms)計時，使用瀏覽器高精度時間（performance.now）。',
+      startHint: '點擊下方區域開始',
+      startBtn: '開始',
+      waiting: '變紅前請勿點擊…',
+      clickNow: '立即點擊！',
+      tooEarly: '太早了！請等畫面變紅再點。',
+      tryAgain: '再測一次',
+      resultLabel: '反應時間',
+      msUnit: 'ms',
+      tierElite: '頂尖！接近職業級反應。',
+      tierExcellent: '非常出色，適合競技遊戲。',
+      tierVeryGood: '很好，持續練習可再進步。',
+      tierGood: '不錯，比許多人更快。',
+      tierAverage: '中等，專注顏色變化可改善。',
+      tierSlow: '稍慢，專心等待變紅。',
+      tierVerySlow: '沒關係，多練習通常會變快。'
+    },
     
     howToUse: {
       title: '使用方法',
@@ -357,7 +501,19 @@ export default {
       q4: '為什麼也要測試右鍵？',
       a4: '在某些遊戲（如Minecraft）中，右鍵速度對於放置方塊和某些動作很重要。我們提供雙鍵測試以覆蓋所有遊戲場景。',
       q5: 'Minecraft中CPS為什麼重要？',
-      a5: '在Minecraft PVP中，更高的CPS可以產生更多連擊和擊退效果，在戰鬥中佔據優勢。大多數競技伺服器中，8-10+ CPS是推薦水平。'
+      a5: '在Minecraft PVP中，更高的CPS可以產生更多連擊和擊退效果，在戰鬥中佔據優勢。大多數競技伺服器中，8-10+ CPS是推薦水平。',
+      q6: '點擊速度測試和CPS測試是一樣的嗎？',
+      a6: '是同一類工具。點擊速度、每秒點擊次數、CPS、連點測試，都是在量測滑鼠一秒內能點幾次。',
+      q7: '什麼是反應速度測試？',
+      a7: '量測您對視覺訊號做出動作有多快。本站於畫面變紅後記錄您點擊的延遲（毫秒），類似簡單的人類反應基準測試，不能代替醫學檢測。',
+      q8: '人的平均反應時間大約多少？',
+      a8: '視覺反應常見約在150～300毫秒之間，但會因年齡、專注度、螢幕延遲與滑鼠而變化。結果僅供個人對比參考。',
+      q9: '有沒有點擊計數器或右鍵CPS？',
+      a9: '有。主面板即時顯示左右鍵總點擊數與CPS，既可當點擊計數器，也可專門測右鍵CPS。',
+      q10: '手機可以測CPS嗎？',
+      a10: '可以。用手機瀏覽器開啟，在測試區連點即可（等同左鍵CPS）。右鍵或長按選單因機型而異。',
+      q11: '左鍵和右鍵CPS能同時看嗎？',
+      a11: '可以。左側顯示左鍵CPS與總點擊，右側顯示右鍵CPS與總點擊，同步即時更新，方便交替點擊練習。'
     },
     
     cpsGuide: {
@@ -409,13 +565,19 @@ export default {
   
   'ja': {
     meta: {
-      title: 'CPSテスト - クリック速度テスト | マウスクリックカウンター・右クリックテスト',
-      description: '無料オンラインCPSテスト・クリック速度テスト。左クリック・右クリックのCPSをリアルタイム測定。クリックカウンターに加えて、CPS tester online（online mouse click counter）で正確なクリック速度を確認できます。Minecraft PVP・ゲーミング練習。ダウンロード不要。',
-      keywords: 'CPSテスト, クリックテスト, クリック速度テスト, マウスクリックテスト, クリックカウンター, online mouse click counter, mouse click counter, cps tester online, 右クリックテスト, 秒間クリック数, オンラインCPSテスト, click test, click speed test, mouse click test, kohi クリックテスト, Minecraft CPS'
+      title: 'マウスクリックテスト·CPSテスト | クリック速度·左右クリック·スマホ対応',
+      description: '無料のマウスクリック・CPSテスト。秒間クリック数リアルタイム、左右クリックのカウンター、右クリックCPS。スマホ・タブレットのブラウザでもタップでCPS測定。反応速度は別タブ。登録不要。',
+      keywords: 'CPSテスト, マウスクリックテスト, クリック速度テスト, クリックテスト, マウスクリック, マウステスト, クリックカウンター, 秒間クリック数, 左クリック, 右クリック, 右クリックCPS, モバイル CPS, 反応速度テスト, 無料',
+      titleReaction: '反応速度テスト オンライン | 反応時間・ベンチマーク | 無料',
+      descriptionReaction: '無料オンライン反応速度テスト。緑の画面から赤に変わったらすぐクリック、ミリ秒で計測。反応時間や反射を確認する簡易ベンチマーク。ブラウザでそのまま利用、インストール不要。',
+      keywordsReaction: '反応速度テスト, 反応時間テスト, 反応テスト, 反応速度, 人間の反応時間, 平均反応時間, 反射テスト, ヒューマンベンチマーク, 無料'
     },
-    title: 'マウスクリック速度テスト',
-    subtitle: 'リアルタイムCPS測定で正確なクリック速度を確認',
-    seoInline: 'オンラインマウスクリックカウンター（online mouse click counter）と CPS tester online で、CPSをリアルタイム測定',
+    title: 'マウスクリック＆反応速度テスト',
+    subtitle: 'CPS／クリック速度（左・右クリック）と反応テストを上のタブで切替。スマホブラウザでも利用できます。',
+    tabs: {
+      cps: 'CPS / クリック速度',
+      reaction: '反応速度'
+    },
     leftClick: '左クリック',
     rightClick: '右クリック',
     leftClickSpeed: '左クリック速度',
@@ -427,6 +589,27 @@ export default {
     testHint: '左または右クリックで速度測定',
     reset: 'リセット',
     selectLanguage: '言語を選択',
+
+    reaction: {
+      title: '反応速度テスト',
+      subtitle: '緑の画面で待ち、赤になったらすぐクリックしてください。',
+      precisionNote: 'ミリ秒(ms)で計測。performance.now による高分解能タイマーを使用します。',
+      startHint: '下のエリアをクリックで開始',
+      startBtn: 'スタート',
+      waiting: '赤になるまでクリックしないでください…',
+      clickNow: '今すぐクリック！',
+      tooEarly: '早すぎます！赤になってからクリックしてください。',
+      tryAgain: 'もう一度',
+      resultLabel: '反応時間',
+      msUnit: 'ms',
+      tierElite: 'エリート級！プロに近い反応速度です。',
+      tierExcellent: '非常に優秀。対戦ゲームに有利です。',
+      tierVeryGood: 'とても良いです。練習でさらに短縮できます。',
+      tierGood: '良い水準です。平均より速いです。',
+      tierAverage: '平均的です。色の変化に集中すると改善できます。',
+      tierSlow: 'やや遅めです。赤の瞬間だけを見てください。',
+      tierVerySlow: '大丈夫です。繰り返しで短くなります。'
+    },
     
     howToUse: {
       title: '使用方法',
@@ -459,7 +642,19 @@ export default {
       q4: 'なぜ右クリックもテストするのですか？',
       a4: 'Minecraftなどの一部のゲームでは、ブロック配置や特定のアクションに右クリック速度が重要です。すべてのゲームシナリオをカバーするために両方のボタンをテストします。',
       q5: 'MinecraftでCPSが重要な理由は？',
-      a5: 'Minecraft PVPでは、高いCPSがより多くのコンボとノックバックを生み出し、戦闘で有利になります。ほとんどの競技サーバーでは8-10+ CPSが推奨され、15+ CPSは非常に優秀なレベルです。'
+      a5: 'Minecraft PVPでは、高いCPSがより多くのコンボとノックバックを生み出し、戦闘で有利になります。ほとんどの競技サーバーでは8-10+ CPSが推奨され、15+ CPSは非常に優秀なレベルです。',
+      q6: 'クリック速度テストとCPSテストは同じですか？',
+      a6: '同じ種類のツールです。「クリック速度」「秒間クリック数」「CPS」「クリッカー」など表現は違っても、1秒あたりのクリック回数を測る点は同じです。',
+      q7: '反応速度テストとは？',
+      a7: '視覚の合図にどれだけ速く反応できるかを測ります。画面が赤に変わってからクリックするまでの遅延をミリ秒で記録します。簡易的なヒューマンベンチマークに近く、医学診断ではありません。',
+      q8: '人の平均的な反応時間は？',
+      a8: '視覚刺激への反応は、多くの成人でおおよそ150～300ms前後に収まることが多いですが、年齢・集中・ディスプレイ遅延・マウスなどで変わります。個人の記録用としてご利用ください。',
+      q9: 'クリックカウンターや右クリックCPSにも使えますか？',
+      a9: 'はい。メインパネルで左右それぞれの総クリック数とCPSをリアルタイム表示するので、クリックカウンター兼・右クリックCPS測定に使えます。',
+      q10: 'スマホでもCPSテストはできますか？',
+      a10: 'はい。スマホのブラウザでテストエリアを連打すると、左クリックと同様にCPSが計測されます。右クリック相当の長押しは端末によって挙動が異なります。',
+      q11: '左クリックと右クリックのCPSを同時に見られますか？',
+      a11: 'はい。左パネルに左クリックのCPSと合計、右パネルに右クリックのCPSと合計が同時にリアルタイム表示されます。'
     },
     
     cpsGuide: {
@@ -511,13 +706,19 @@ export default {
   
   'de': {
     meta: {
-      title: 'CPS-Test - Klickgeschwindigkeitstest | Mausklick-Zähler & Rechtsklick-Test',
-      description: 'Kostenloser Online-CPS-Test und Klickgeschwindigkeitstest. Online mouse click counter und CPS tester online — Links- und Rechtsklick-CPS in Echtzeit messen. Klickzähler, Click-Test. Minecraft PVP, Gaming. Kein Download nötig.',
-      keywords: 'CPS-Test, Klick-Test, Klickgeschwindigkeitstest, Mausklick-Test, Mausklick-Zähler, online mouse click counter, cps tester online, Klickzähler, Rechtsklick-Test, Online CPS-Test, click test, click speed test, mouse click counter, Minecraft CPS'
+      title: 'Mausklick-Geschwindigkeitstest & CPS-Test | Links/Rechts, Mobil, gratis',
+      description: 'Kostenloser Mausklick- und CPS-Test im Browser: Linksklick- und Rechtsklick-CPS, Klickzähler, Klicks pro Sekunde live. Funktioniert auch als mobiler CPS-Test auf Handy und Tablet. Reaktionszeit im zweiten Tab. Ohne Anmeldung.',
+      keywords: 'CPS-Test, Mausklick-Test, Mausklick-Geschwindigkeitstest, Klickgeschwindigkeitstest, Klick-Test, Maustest, Klickzähler, Rechtsklick CPS, Linksklick CPS, mobiler CPS-Test, Mausklick Geschwindigkeit, Reaktionstest, kostenlos',
+      titleReaction: 'Reaktionstest online | Reaktionszeit & Reflex | kostenlos',
+      descriptionReaction: 'Kostenloser Online-Reaktionstest: auf Grün warten, bei Rot sofort klicken—Zeit in Millisekunden. Reaktionszeit und Reflexe prüfen, vergleichbar mit einfachen Human-Benchmark-Checks. Im Browser, ohne Install.',
+      keywordsReaction: 'Reaktionstest, Reaktionszeit testen, Reaktionstest Zeit, Reaktionsgeschwindigkeit, menschliche Reaktionszeit, durchschnittliche Reaktionszeit, Reflextest, Reaktion Benchmark'
     },
-    title: 'Mausklick-Geschwindigkeitstest',
-    subtitle: 'Messen Sie Ihre genaue Klickgeschwindigkeit mit Echtzeit-CPS-Tracking',
-    seoInline: 'Online mouse click counter & CPS tester online — CPS in Echtzeit messen',
+    title: 'Mausklick- & Reaktionstest',
+    subtitle: 'CPS / Klickgeschwindigkeit (links & rechts) und Reaktionstest oben per Tab—auch mobil im Browser nutzbar.',
+    tabs: {
+      cps: 'CPS / Klickgeschwindigkeit',
+      reaction: 'Reaktionszeit'
+    },
     leftClick: 'Linksklick',
     rightClick: 'Rechtsklick',
     leftClickSpeed: 'Linksklick-Geschwindigkeit',
@@ -529,6 +730,27 @@ export default {
     testHint: 'Links oder rechts klicken, um die Geschwindigkeit zu messen',
     reset: 'Zurücksetzen',
     selectLanguage: 'Sprache wählen',
+
+    reaction: {
+      title: 'Reaktionstest',
+      subtitle: 'Warten Sie auf Grün. Sobald es Rot wird, klicken Sie so schnell wie möglich.',
+      precisionNote: 'Zeit in Millisekunden (ms) mit Hochauflösungs-Timer (performance.now).',
+      startHint: 'Klicken Sie unten, um zu starten',
+      startBtn: 'Start',
+      waiting: 'Nicht klicken, bis es Rot wird…',
+      clickNow: 'Jetzt klicken!',
+      tooEarly: 'Zu früh! Klicken Sie erst nach dem Rot.',
+      tryAgain: 'Nochmal',
+      resultLabel: 'Reaktionszeit',
+      msUnit: 'ms',
+      tierElite: 'Elite – fast Profi-Niveau.',
+      tierExcellent: 'Hervorragend – gut fürs Gaming.',
+      tierVeryGood: 'Sehr gut. Übung macht schneller.',
+      tierGood: 'Gut – schneller als viele andere.',
+      tierAverage: 'Durchschnitt. Fokus auf den Farbwechsel hilft.',
+      tierSlow: 'Etwas langsam. Nur auf Rot achten.',
+      tierVerySlow: 'Kein Problem – Übung verkürzt die Zeit.'
+    },
     
     howToUse: {
       title: 'Anleitung',
@@ -561,7 +783,19 @@ export default {
       q4: 'Warum auch Rechtsklick testen?',
       a4: 'In einigen Spielen wie Minecraft ist die Rechtsklick-Geschwindigkeit für Blockplatzierung und bestimmte Aktionen wichtig. Wir bieten Tests für beide Tasten an.',
       q5: 'Warum ist CPS in Minecraft wichtig?',
-      a5: 'In Minecraft PVP erzeugt höheres CPS mehr Combos und Knockback, was Ihnen Kampfvorteile verschafft. Die meisten Wettbewerbsserver profitieren von 8-10+ CPS, wobei 15+ CPS hervorragend ist.'
+      a5: 'In Minecraft PVP erzeugt höheres CPS mehr Combos und Knockback, was Ihnen Kampfvorteile verschafft. Die meisten Wettbewerbsserver profitieren von 8-10+ CPS, wobei 15+ CPS hervorragend ist.',
+      q6: 'Sind Klickgeschwindigkeitstest und CPS-Test dasselbe?',
+      a6: 'Ja—dieselbe Art Tool. Begriffe wie Klickgeschwindigkeit, Klicks pro Sekunde, CPS oder Clicker-Test beschreiben alle, wie oft Sie die Maus pro Sekunde klicken können.',
+      q7: 'Was ist ein Reaktionstest?',
+      a7: 'Er misst, wie schnell Sie auf ein visuelles Signal reagieren. Wir messen die Verzögerung in Millisekunden, nachdem der Bildschirm rot wird—ähnlich einfachen Benchmarks, keine medizinische Diagnose.',
+      q8: 'Wie schnell reagiert ein Mensch typischerweise?',
+      a8: 'Visuelle Reaktionen liegen bei vielen Erwachsenen oft etwa bei 150–300 ms, hängen aber von Alter, Konzentration, Display-Latenz und Maus ab. Nur als persönlicher Vergleichswert nutzen.',
+      q9: 'Gibt es einen Klickzähler oder Rechtsklick-CPS?',
+      a9: 'Ja. Das CPS-Feld zeigt live Gesamtklicks und CPS für links und rechts—geeignet als Klickzähler und als Rechtsklick-CPS-Test im Browser.',
+      q10: 'Funktioniert der CPS-Test auf dem Handy?',
+      a10: 'Ja. Im mobilen Browser tippen Sie auf die Testfläche—die Taps zählen wie Linksklicks für CPS. Rechtsklick/Kontextmenü ist je nach Gerät unterschiedlich.',
+      q11: 'Kann ich Linksklick- und Rechtsklick-CPS gleichzeitig sehen?',
+      a11: 'Ja. Ein Bereich zeigt live Linksklick-CPS und Gesamtklicks, der andere Rechtsklick-CPS und Gesamtklicks—parallel aktualisiert.'
     },
     
     cpsGuide: {
@@ -613,13 +847,19 @@ export default {
   
   'fr': {
     meta: {
-      title: 'Test CPS - Test de vitesse de clic | Compteur de clics & Test clic droit',
-      description: 'Test CPS et test de vitesse de clic en ligne gratuits. Online mouse click counter et CPS tester online — mesurez le CPS du clic gauche et droit en temps réel. Compteur de clics, click test. Minecraft PVP, gaming. Sans téléchargement.',
-      keywords: 'test CPS, click test, test de vitesse de clic, test de clic de souris, compteur de clics, online mouse click counter, mouse click counter, cps tester online, test clic droit, test CPS en ligne, clics par seconde, click speed test, Minecraft CPS'
+      title: 'Test vitesse clic souris & CPS | gauche/droite, mobile, gratuit',
+      description: 'Test CPS et vitesse de clic souris gratuits dans le navigateur : CPS clic gauche et droit, compteur, clics par seconde en direct. Utilisable sur mobile comme test CPS téléphone. Temps de réaction dans l’autre onglet. Sans inscription.',
+      keywords: 'test CPS, test souris, test vitesse de clic, test de clic, compteur de clics, CPS clic droit, CPS clic gauche, test CPS mobile, clics par seconde, test réflexes, gratuit',
+      titleReaction: 'Test temps de réaction en ligne | réflexes & benchmark',
+      descriptionReaction: 'Test de temps de réaction gratuit : attendez le vert, cliquez au rouge—mesure en millisecondes. Évaluez vos réflexes et un ordre de grandeur du temps de réaction humain. Dans le navigateur, sans installation.',
+      keywordsReaction: 'test temps de réaction, test pour temps de réaction, test de réaction, vitesse de réaction, temps de réaction humain, temps de réaction moyen, test réflexes, benchmark réaction'
     },
-    title: 'Test de vitesse de clic de souris',
-    subtitle: 'Mesurez votre vitesse de clic exacte avec le suivi CPS en temps réel',
-    seoInline: 'Online mouse click counter & CPS tester online — mesurez votre CPS en temps réel',
+    title: 'Test clic souris & temps de réaction',
+    subtitle: 'CPS / vitesse de clic (gauche et droit) et test de réaction : changez d’onglet ci-dessus. Compatible navigateur mobile.',
+    tabs: {
+      cps: 'CPS / vitesse de clic',
+      reaction: 'Temps de réaction'
+    },
     leftClick: 'Clic gauche',
     rightClick: 'Clic droit',
     leftClickSpeed: 'Vitesse de clic gauche',
@@ -631,6 +871,27 @@ export default {
     testHint: 'Clic gauche ou droit pour mesurer la vitesse',
     reset: 'Réinitialiser',
     selectLanguage: 'Choisir la langue',
+
+    reaction: {
+      title: 'Test de temps de réaction',
+      subtitle: 'Restez sur le vert. Quand ça devient rouge, cliquez le plus vite possible.',
+      precisionNote: 'Mesure en millisecondes (ms) via performance.now (haute précision).',
+      startHint: 'Cliquez ci-dessous pour commencer',
+      startBtn: 'Commencer',
+      waiting: 'Ne cliquez pas avant le rouge…',
+      clickNow: 'Cliquez maintenant !',
+      tooEarly: 'Trop tôt ! Attendez le rouge puis cliquez.',
+      tryAgain: 'Réessayer',
+      resultLabel: 'Temps de réaction',
+      msUnit: 'ms',
+      tierElite: 'Élite — niveau proche du pro.',
+      tierExcellent: 'Excellent — idéal pour le jeu compétitif.',
+      tierVeryGood: 'Très bon. La pratique améliore encore.',
+      tierGood: 'Bon — plus rapide que beaucoup de monde.',
+      tierAverage: 'Moyen. Concentrez-vous sur le changement de couleur.',
+      tierSlow: 'Un peu lent. Ne regardez que le passage au rouge.',
+      tierVerySlow: 'Pas grave — la répétition aide.'
+    },
     
     howToUse: {
       title: 'Mode d\'emploi',
@@ -663,7 +924,19 @@ export default {
       q4: 'Pourquoi tester le clic droit aussi?',
       a4: 'Dans certains jeux comme Minecraft, la vitesse de clic droit est importante pour le placement de blocs et certaines actions. Nous testons les deux boutons.',
       q5: 'Pourquoi le CPS est-il important dans Minecraft?',
-      a5: 'Dans Minecraft PVP, un CPS plus élevé crée plus de combos et de knockback, donnant un avantage au combat. La plupart des serveurs compétitifs bénéficient de 8-10+ CPS.'
+      a5: 'Dans Minecraft PVP, un CPS plus élevé crée plus de combos et de knockback, donnant un avantage au combat. La plupart des serveurs compétitifs bénéficient de 8-10+ CPS.',
+      q6: 'Test de vitesse de clic et test CPS, c\'est pareil ?',
+      a6: 'Oui—même type d\'outil. On parle de vitesse de clic, de clics par seconde, de CPS ou de test clicker : tout mesure combien de clics souris vous faites en une seconde.',
+      q7: 'Qu\'est-ce qu\'un test de temps de réaction ?',
+      a7: 'Il mesure à quelle vitesse vous réagissez à un signal visuel. Nous enregistrons le délai en millisecondes après le passage au rouge—proche d\'un petit benchmark « humain », pas un examen médical.',
+      q8: 'Quel est un temps de réaction humain typique ?',
+      a8: 'Pour un stimulus visuel, beaucoup d\'adultes se situent souvent autour de 150–300 ms, mais l\'âge, la concentration, l\'écran et la souris changent le résultat. À utiliser comme repère personnel seulement.',
+      q9: 'Y a-t-il un compteur de clics ou un test CPS au clic droit ?',
+      a9: 'Oui. Le panneau affiche en direct le total et le CPS pour clic gauche et droit : compteur de clics et test CPS clic droit dans le navigateur.',
+      q10: 'Le test CPS fonctionne-t-il sur mobile ?',
+      a10: 'Oui. Ouvrez le site dans le navigateur du téléphone et tapez sur la zone de test—les taps comptent comme des clics gauche pour le CPS. Le clic droit varie selon l’appareil.',
+      q11: 'Puis-je voir le CPS du clic gauche et du clic droit en même temps ?',
+      a11: 'Oui. Un panneau montre le CPS et le total à gauche, l’autre à droite, mis à jour en temps réel—pratique pour l’entraînement en clics alternés.'
     },
     
     cpsGuide: {

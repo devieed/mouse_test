@@ -18,9 +18,41 @@
             <option value="fr">🇫🇷 Français</option>
           </select>
         </div>
-        <div class="seo-inline">{{ t('seoInline') }}</div>
       </header>
 
+      <!-- Main feature tabs: CPS vs reaction (visible immediately) -->
+      <div class="main-tabs" role="tablist" aria-label="Test type">
+        <button
+          type="button"
+          role="tab"
+          :aria-selected="activeTab === 'cps'"
+          :tabindex="activeTab === 'cps' ? 0 : -1"
+          class="main-tab"
+          :class="{ active: activeTab === 'cps' }"
+          @click="activeTab = 'cps'"
+        >
+          {{ t('tabs.cps') }}
+        </button>
+        <button
+          type="button"
+          role="tab"
+          :aria-selected="activeTab === 'reaction'"
+          :tabindex="activeTab === 'reaction' ? 0 : -1"
+          class="main-tab"
+          :class="{ active: activeTab === 'reaction' }"
+          @click="activeTab = 'reaction'"
+        >
+          {{ t('tabs.reaction') }}
+        </button>
+      </div>
+
+      <div
+        v-show="activeTab === 'cps'"
+        id="panel-cps"
+        role="tabpanel"
+        :aria-hidden="activeTab !== 'cps'"
+        class="tab-panel"
+      >
       <!-- Stats Display -->
       <div class="stats-container">
         <div class="stat-card left-click">
@@ -70,6 +102,17 @@
         <span class="button-icon">🔄</span>
         {{ t('reset') }}
       </button>
+      </div>
+
+      <div
+        v-show="activeTab === 'reaction'"
+        id="panel-reaction"
+        role="tabpanel"
+        :aria-hidden="activeTab !== 'reaction'"
+        class="tab-panel"
+      >
+        <ReactionTest embedded />
+      </div>
 
       <!-- How to Use Section -->
       <section class="info-section" id="how-to-use">
@@ -198,6 +241,30 @@
             <summary>{{ t('faq.q5') }}</summary>
             <p>{{ t('faq.a5') }}</p>
           </details>
+          <details class="faq-item">
+            <summary>{{ t('faq.q6') }}</summary>
+            <p>{{ t('faq.a6') }}</p>
+          </details>
+          <details class="faq-item">
+            <summary>{{ t('faq.q7') }}</summary>
+            <p>{{ t('faq.a7') }}</p>
+          </details>
+          <details class="faq-item">
+            <summary>{{ t('faq.q8') }}</summary>
+            <p>{{ t('faq.a8') }}</p>
+          </details>
+          <details class="faq-item">
+            <summary>{{ t('faq.q9') }}</summary>
+            <p>{{ t('faq.a9') }}</p>
+          </details>
+          <details class="faq-item">
+            <summary>{{ t('faq.q10') }}</summary>
+            <p>{{ t('faq.a10') }}</p>
+          </details>
+          <details class="faq-item">
+            <summary>{{ t('faq.q11') }}</summary>
+            <p>{{ t('faq.a11') }}</p>
+          </details>
         </div>
       </section>
 
@@ -229,8 +296,37 @@ import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useSeoMeta } from './composables/useSeoMeta'
 import i18n, { updateURLLanguage } from './i18n'
+import ReactionTest from './components/ReactionTest.vue'
 
 const { t, locale } = useI18n()
+
+const activeTab = ref('cps')
+
+function readTabFromUrl() {
+  try {
+    const p = new URLSearchParams(window.location.search)
+    if (p.get('tab') === 'reaction') activeTab.value = 'reaction'
+  } catch {
+    /* ignore */
+  }
+}
+
+function writeTabToUrl() {
+  try {
+    const url = new URL(window.location.href)
+    if (activeTab.value === 'reaction') url.searchParams.set('tab', 'reaction')
+    else url.searchParams.delete('tab')
+    window.history.replaceState({}, '', url.toString())
+  } catch {
+    /* ignore */
+  }
+}
+
+watch(activeTab, () => {
+  writeTabToUrl()
+})
+
+useSeoMeta(i18n, activeTab)
 
 const leftClickCount = ref(0)
 const rightClickCount = ref(0)
@@ -285,7 +381,7 @@ function tick() {
   rafId = requestAnimationFrame(tick)
 }
 onMounted(() => {
-  useSeoMeta(i18n)
+  readTabFromUrl()
   rafId = requestAnimationFrame(tick)
 })
 onUnmounted(() => cancelAnimationFrame(rafId))
@@ -423,17 +519,47 @@ const changeLanguage = () => {
 .subtitle {
   font-size: 1.1rem;
   color: #666;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   line-height: 1.6;
 }
 
-.seo-inline {
-  margin-top: 12px;
-  margin-bottom: 20px;
-  font-size: 1rem;
-  font-weight: 700;
+.main-tabs {
+  display: flex;
+  gap: 6px;
+  margin: 0 20px 22px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  background: #e9ecef;
+  border-radius: 14px;
+}
+
+.main-tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 14px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  border-radius: 11px;
+  cursor: pointer;
+  color: #555;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.main-tab:hover {
+  color: #333;
+}
+
+.main-tab.active {
+  background: white;
   color: #667eea;
-  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.tab-panel {
+  min-height: 120px;
 }
 
 /* Stats Container */
