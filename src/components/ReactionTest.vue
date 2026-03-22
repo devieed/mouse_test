@@ -78,8 +78,8 @@ const tierClass = ref('')
 let timeoutId = null
 let redShownAt = 0
 
-const MIN_DELAY_MS = 2000
-const MAX_DELAY_MS = 5500
+const MIN_DELAY_MS = 1000
+const MAX_DELAY_MS = 3500
 
 function clearWaitTimer() {
   if (timeoutId != null) {
