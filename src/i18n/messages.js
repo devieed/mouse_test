@@ -142,9 +142,9 @@ export default {
   
   'en': {
     meta: {
-      title: 'CPS Test 2026: Official Mouse Click Speed Test (Check Your Clicks Per Second)',
-      description: 'Measure your clicking speed accurately. Professional-grade CPS counter for gamers. Can you beat the world record? No lag, instant results.',
-      keywords: 'mouse click speed test, cps test, click test, click speed test, cps test right click, cps test left click, right click cps test, left click cps test, cps test mobile, mobile cps test, mouse click test, mouse speed test, cps counter, click counter, mouse tester, clicking speed test, free cps test, cps test online',
+      title: 'CPS Test 2026 — Mouse Click Speed Test (Clicks Per Second)',
+      description: 'Free CPS test: measure left-click & right-click clicks per second in real time. Works on PC and mobile, no install needed. Train your click speed for Minecraft PVP, FPS, and more.',
+      keywords: 'cps test, mouse click speed test, click speed test, click test, cps test right click, right click cps test, left click cps test, cps test mobile, mouse click test, cps counter, click counter, clicking speed test, mouse speed test, free cps test, cps test online, reaction time test',
       titleReaction: 'Reaction Time Test Online | Reflex & Human Reaction Benchmark',
       descriptionReaction: 'Free online reaction time test: wait on green, click when the screen turns red—timing in milliseconds. Check your reflexes and compare human reaction time. Runs in the browser, no install.',
       keywordsReaction: 'reaction time test, test for reaction time, reaction test, reaction speed test, human reaction time, average reaction time, reflex test, reactions test, human benchmark reaction time'

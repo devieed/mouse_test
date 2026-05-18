@@ -2,106 +2,146 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <!-- Main page (Korean default based on highest search volume) -->
+  <!-- Root / English (canonical English version, also x-default) -->
   <url>
     <loc>https://ed9e.net/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ed9e.net/?lang=ko" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ed9e.net/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://ed9e.net/?lang=zh-cn" />
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://ed9e.net/?lang=zh-tw" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://ed9e.net/?lang=ja" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://ed9e.net/?lang=de" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ed9e.net/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="en"       href="https://ed9e.net/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="ko"       href="https://ed9e.net/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans"  href="https://ed9e.net/?lang=zh-cn" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant"  href="https://ed9e.net/?lang=zh-tw" />
+    <xhtml:link rel="alternate" hreflang="ja"       href="https://ed9e.net/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="de"       href="https://ed9e.net/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr"       href="https://ed9e.net/?lang=fr" />
   </url>
   
-  <!-- Korean version (highest priority due to search volume) -->
+  <!-- Korean -->
   <url>
     <loc>https://ed9e.net/?lang=ko</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="ko"       href="https://ed9e.net/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans"  href="https://ed9e.net/?lang=zh-cn" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant"  href="https://ed9e.net/?lang=zh-tw" />
+    <xhtml:link rel="alternate" hreflang="ja"       href="https://ed9e.net/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="de"       href="https://ed9e.net/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr"       href="https://ed9e.net/?lang=fr" />
   </url>
   
-  <!-- English version -->
-  <url>
-    <loc>https://ed9e.net/?lang=en</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Simplified Chinese version -->
-  <url>
-    <loc>https://ed9e.net/?lang=zh-cn</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <!-- Traditional Chinese version -->
+  <!-- Traditional Chinese -->
   <url>
     <loc>https://ed9e.net/?lang=zh-tw</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <!-- Japanese version -->
-  <url>
-    <loc>https://ed9e.net/?lang=ja</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- German version -->
-  <url>
-    <loc>https://ed9e.net/?lang=de</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <!-- French version -->
-  <url>
-    <loc>https://ed9e.net/?lang=fr</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <!-- Reaction time test (tab=reaction) — default URL -->
-  <url>
-    <loc>https://ed9e.net/?tab=reaction</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ed9e.net/?lang=ko&amp;tab=reaction" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ed9e.net/?lang=en&amp;tab=reaction" />
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://ed9e.net/?lang=zh-cn&amp;tab=reaction" />
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://ed9e.net/?lang=zh-tw&amp;tab=reaction" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://ed9e.net/?lang=ja&amp;tab=reaction" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://ed9e.net/?lang=de&amp;tab=reaction" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ed9e.net/?lang=fr&amp;tab=reaction" />
+    <xhtml:link rel="alternate" hreflang="en"       href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="ko"       href="https://ed9e.net/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans"  href="https://ed9e.net/?lang=zh-cn" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant"  href="https://ed9e.net/?lang=zh-tw" />
+    <xhtml:link rel="alternate" hreflang="ja"       href="https://ed9e.net/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="de"       href="https://ed9e.net/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr"       href="https://ed9e.net/?lang=fr" />
+  </url>
+  
+  <!-- Simplified Chinese -->
+  <url>
+    <loc>https://ed9e.net/?lang=zh-cn</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="ko"       href="https://ed9e.net/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans"  href="https://ed9e.net/?lang=zh-cn" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant"  href="https://ed9e.net/?lang=zh-tw" />
+    <xhtml:link rel="alternate" hreflang="ja"       href="https://ed9e.net/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="de"       href="https://ed9e.net/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr"       href="https://ed9e.net/?lang=fr" />
+  </url>
+  
+  <!-- Japanese -->
+  <url>
+    <loc>https://ed9e.net/?lang=ja</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="ko"       href="https://ed9e.net/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans"  href="https://ed9e.net/?lang=zh-cn" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant"  href="https://ed9e.net/?lang=zh-tw" />
+    <xhtml:link rel="alternate" hreflang="ja"       href="https://ed9e.net/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="de"       href="https://ed9e.net/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr"       href="https://ed9e.net/?lang=fr" />
+  </url>
+  
+  <!-- German -->
+  <url>
+    <loc>https://ed9e.net/?lang=de</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="ko"       href="https://ed9e.net/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans"  href="https://ed9e.net/?lang=zh-cn" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant"  href="https://ed9e.net/?lang=zh-tw" />
+    <xhtml:link rel="alternate" hreflang="ja"       href="https://ed9e.net/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="de"       href="https://ed9e.net/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr"       href="https://ed9e.net/?lang=fr" />
+  </url>
+  
+  <!-- French -->
+  <url>
+    <loc>https://ed9e.net/?lang=fr</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ed9e.net/" />
+    <xhtml:link rel="alternate" hreflang="ko"       href="https://ed9e.net/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans"  href="https://ed9e.net/?lang=zh-cn" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant"  href="https://ed9e.net/?lang=zh-tw" />
+    <xhtml:link rel="alternate" hreflang="ja"       href="https://ed9e.net/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="de"       href="https://ed9e.net/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr"       href="https://ed9e.net/?lang=fr" />
+  </url>
+
+  <!-- Reaction time test — default (English) -->
+  <url>
+    <loc>https://ed9e.net/?tab=reaction</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://ed9e.net/?tab=reaction" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ed9e.net/?tab=reaction" />
+    <xhtml:link rel="alternate" hreflang="ko"       href="https://ed9e.net/?lang=ko&amp;tab=reaction" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans"  href="https://ed9e.net/?lang=zh-cn&amp;tab=reaction" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant"  href="https://ed9e.net/?lang=zh-tw&amp;tab=reaction" />
+    <xhtml:link rel="alternate" hreflang="ja"       href="https://ed9e.net/?lang=ja&amp;tab=reaction" />
+    <xhtml:link rel="alternate" hreflang="de"       href="https://ed9e.net/?lang=de&amp;tab=reaction" />
+    <xhtml:link rel="alternate" hreflang="fr"       href="https://ed9e.net/?lang=fr&amp;tab=reaction" />
   </url>
   
   <!-- Reaction time test — Korean -->
   <url>
     <loc>https://ed9e.net/?lang=ko&amp;tab=reaction</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   
-  <!-- Reaction time test — English -->
+  <!-- Reaction time test — Traditional Chinese -->
   <url>
-    <loc>https://ed9e.net/?lang=en&amp;tab=reaction</loc>
-    <lastmod>2026-03-22</lastmod>
+    <loc>https://ed9e.net/?lang=zh-tw&amp;tab=reaction</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -109,15 +149,7 @@
   <!-- Reaction time test — Simplified Chinese -->
   <url>
     <loc>https://ed9e.net/?lang=zh-cn&amp;tab=reaction</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.82</priority>
-  </url>
-  
-  <!-- Reaction time test — Traditional Chinese -->
-  <url>
-    <loc>https://ed9e.net/?lang=zh-tw&amp;tab=reaction</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.82</priority>
   </url>
@@ -125,7 +157,7 @@
   <!-- Reaction time test — Japanese -->
   <url>
     <loc>https://ed9e.net/?lang=ja&amp;tab=reaction</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.78</priority>
   </url>
@@ -133,7 +165,7 @@
   <!-- Reaction time test — German -->
   <url>
     <loc>https://ed9e.net/?lang=de&amp;tab=reaction</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -141,7 +173,7 @@
   <!-- Reaction time test — French -->
   <url>
     <loc>https://ed9e.net/?lang=fr&amp;tab=reaction</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -149,25 +181,25 @@
   <!-- About Us page -->
   <url>
     <loc>https://ed9e.net/about.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   
   <!-- Privacy Policy page -->
   <url>
     <loc>https://ed9e.net/privacy.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
   
   <!-- Terms of Service page -->
   <url>
     <loc>https://ed9e.net/terms.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
   
 </urlset>
